@@ -1,0 +1,122 @@
+@use '../helper/_variables' as *
+@use '../helper/_mixin' as *
+@use '../layout/_layout' as *
+
+.event-section
+  .event-list
+    overflow: hidden
+
+    .swiper
+      height: 100%
+      width: 100%
+      overflow: hidden
+      position: relative
+      padding-bottom: 3rem
+
+      .swiper-pagination
+        .swiper-pagination-bullet
+          height: 7px
+          width: 1rem
+          background-color: $pri
+          border-radius: 1rem
+
+      .slide-button-group
+        position: absolute
+        top: 1rem
+        right: 1rem
+        @include flex($justify: center)
+        gap: .5rem
+        z-index: 10
+
+        .slide-button-next, .slide-button-prev
+          height: 2rem
+          width: 2rem
+          border: 2px solid $pri
+          @include flex($justify: center)
+          border-radius: 50%
+          cursor: pointer
+          background-color: $light
+          @include fastTrans()
+          color: $pri
+
+          &:hover
+            transform: scale(1.1)
+
+          // &.swiper-button-disabled
+          //   opacity: .5
+          //   pointer-events: none
+
+    .event-item
+      border-radius: 1rem
+      overflow: hidden
+      box-shadow: 0 0 10px rgba($dark, .1)
+
+      &:hover
+        .image
+          img
+            transform: scale(1.1)
+
+        .content
+          background-color: rgba($pri, .06)
+
+          h3
+            color: $pri
+
+      .image
+        height: 10rem
+        width: 100%
+        overflow: hidden
+
+        img
+          @include image()
+          @include trans()
+
+      .content
+        padding: .7rem
+        padding-left: 2.2rem
+        position: relative
+        @include trans()
+
+        .date
+          position: absolute
+          left: 0
+          top: 0
+          height: 100%
+          width: 1.5rem
+          background-color: $pri
+          color: $light
+          @include flex($justify: center)
+          overflow: hidden
+
+          span
+            transform: rotate(-90deg)
+            width: 20rem
+            min-width: 10rem
+            text-align: center
+            font-size: .8rem
+            font-weight: 400
+            display: inline-block
+
+        .post-info
+          @include flex($justify: space-between)
+
+          .posted-by, .comments
+            @include flex($justify: flex-start)
+            gap: .4rem
+            font-size: .8rem
+
+            i
+              color: $pri
+              font-size: .9rem
+
+            h4
+              font-weight: 500
+              color: $para
+
+        h3
+          font-size: .9rem
+          font-weight: 600
+          margin-top: 1rem
+          line-height: 130%
+          color: $dark
+          @include trans()

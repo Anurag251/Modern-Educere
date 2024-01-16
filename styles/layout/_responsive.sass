@@ -1,0 +1,53 @@
+@use '../helper/_variables' as *
+@use '../helper/_mixin' as *
+@use '../layout/_layout' as *
+
+@media only screen and ( max-width:  1200px)
+  .wrapper
+    max-width: 1100px
+
+@media only screen and ( max-width:  1100px)
+  .wrapper
+    max-width: 1000px
+
+  .gallery-section
+    .gallery
+      .list
+        --n: 5
+        --m: 3
+
+  @media only screen and ( max-width:  1055px)
+  .wrapper
+    max-width: 900px
+
+@media only screen and ( max-width: 900px)
+  .wrapper
+    max-width: 800px
+
+@media only screen and ( max-width:  800px)
+  .wrapper
+    max-width: 600px
+
+  .gallery-section
+    .gallery
+      .list
+        --n: 5
+        --m: 2
+        --h: calc((140vh - (var(--n) - 1)*var(--g))/var(--n))
+        height: 140vh
+
+@media only screen and ( max-width:  700px)
+
+@media only screen and ( max-width:  650px)
+
+@media only screen and ( max-width:  600px)
+  .wrapper
+    max-width: 500px
+
+@media only screen and ( max-width:  440px)
+  .gallery-section
+    .gallery
+      .list
+        --n: 10 /* number of rows*/
+
+@media only screen and ( max-width:  380px)

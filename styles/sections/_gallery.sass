@@ -1,0 +1,41 @@
+@use '../helper/_variables' as *
+@use '../helper/_mixin' as *
+@use '../layout/_layout' as *
+
+/***********      gallery      ***********/
+.gallery-section
+  .gallery
+    .list
+      --n: 3
+      --m: 4
+      --h: calc((80vh - (var(--n) - 1)*var(--g))/var(--n))
+      --w: calc((50vw - (var(--m) - 1)*var(--g))/var(--m))
+      --g: 10px
+      --f: 1.5
+
+      display: grid
+      gap: var(--g)
+      width: 100%
+      height: 80vh
+      grid-template-columns: repeat(var(--m),auto)
+
+      img
+        width: 0
+        height: 0
+        min-height: 100%
+        min-width: 100%
+        object-fit: cover
+        cursor: pointer
+        filter: grayscale(80%)
+        @include trans()
+        border-radius: .5rem
+
+        &:hover
+          filter: grayscale(0)
+          width: calc(var(--w)*var(--f))
+          height: calc(var(--h)*var(--f))
+
+  .view-all
+    @include flex($justify: center)
+    width: 100%
+    margin-top: 2rem

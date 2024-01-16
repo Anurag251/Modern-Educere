@@ -1,0 +1,111 @@
+@use '../helper/_variables' as *
+@use '../helper/_mixin' as *
+@use '../layout/_layout' as *
+
+.program-section
+  .program-list
+    overflow: hidden
+
+    .swiper
+      height: 100%
+      width: 100%
+      overflow: hidden
+      position: relative
+      padding-bottom: 3rem
+
+      .swiper-pagination
+        .swiper-pagination-bullet
+          height: 7px
+          width: 1rem
+          background-color: $pri
+          border-radius: 1rem
+
+      .slide-button-group
+        position: absolute
+        top: 1rem
+        right: 1rem
+        @include flex($justify: center)
+        gap: .5rem
+        z-index: 10
+
+        .slide-button-next, .slide-button-prev
+          height: 2rem
+          width: 2rem
+          border: 2px solid $pri
+          @include flex($justify: center)
+          border-radius: 50%
+          cursor: pointer
+          background-color: $light
+          @include fastTrans()
+          color: $pri
+
+          &:hover
+            transform: scale(1.1)
+
+          // &.swiper-button-disabled
+          //   opacity: .5
+          //   pointer-events: none
+
+    .program-item
+      .image-area
+        height: 12rem
+        width: 100%
+        overflow: hidden
+        border-radius: .5rem
+
+        img
+          @include image()
+
+      .content
+        position: relative
+        padding: 1.3rem .5rem .5rem
+
+        .fee
+          position: absolute
+          top: 0
+          left: .5rem
+          transform: translateY(-50%)
+          padding: .2rem .8rem
+          background-color: $pri
+          font-size: .8rem
+          color: $light
+          border-radius: 2rem
+
+        h3
+          font-size: 1.1rem
+          font-weight: 600
+
+        p
+          font-size: .8rem
+          margin: 1rem 0
+
+        .item-info
+          @include grid($columns: 1fr 1fr 1fr)
+          gap: 0
+          margin-top: 1rem
+          background-color: rgba($pri, .1)
+          color: $dark
+          padding: .7rem .3rem
+          border-radius: 1rem
+
+          li
+            text-align: center
+            width: 100%
+
+            &:nth-child(2)
+              border-left: 1px dashed $dark
+              border-right: 1px dashed $dark
+
+            h4
+              font-size: .8rem
+              font-weight: 600
+
+            p
+              font-size: .7rem
+              font-weight: 400
+              margin: 0
+
+        .custom-button
+          padding: .6rem 1rem
+          width: 100%
+          margin-top: 1rem
