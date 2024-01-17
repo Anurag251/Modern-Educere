@@ -172,6 +172,47 @@ p
     font-size: 3rem
     z-index: 2
 
+.page-title-section
+  position: relative
+  height: 18rem
+  @include bgImage()
+  background-position: center -5rem
+
+  &::after
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    background-color: rgba($sec, .5)
+    z-index: 1
+
+  .page-title
+    position: absolute
+    bottom: 0
+    left: 50%
+    transform: translateX(-50%)
+    color: $light
+    z-index: 2
+    text-align: center
+    width: 100%
+
+    h5
+      font-size: 1.4rem
+      margin-bottom: 1.5rem
+      font-weight: 400
+      a
+        color: $light
+
+        &:hover
+          color: $pri
+
+    h2
+      font-size: 5.5rem
+      line-height: 3.8rem
+      text-transform: uppercase
+
 div
 
 @import './sections/_header'

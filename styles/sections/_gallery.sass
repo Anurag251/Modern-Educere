@@ -35,7 +35,55 @@
           width: calc(var(--w)*var(--f))
           height: calc(var(--h)*var(--f))
 
-  .view-all
-    @include flex($justify: center)
-    width: 100%
-    margin-top: 2rem
+.gallery-page
+  .gallery
+    .list
+      @include grid($columns: 1fr 1fr 1fr 1fr)
+      grid-gap: 1rem
+
+      a
+        height: 13rem
+        width: 100%
+        overflow: hidden
+        border-radius: .5rem
+
+      img
+        @include image()
+        filter: grayscale(80%)
+        @include trans()
+
+        &:hover
+          transform: scale(1.1)
+          filter: grayscale(0%)
+
+      @keyframes loading
+        0%
+          left: -4rem
+          opacity: .5
+        100%
+          left: 120%
+          opacity: 1
+
+      .loading
+        height: 13rem
+        width: 100%
+        border-radius: .5rem
+        background-image: linear-gradient(90deg, rgba($dark, .2), rgba($dark, .06))
+        position: relative
+        overflow: hidden
+
+        &::after
+          content: ""
+          position: absolute
+          left: 0
+          transform: translateX(-50%)
+          top: 0
+          height: 100%
+          width: 8rem
+          background-image: linear-gradient(90deg, rgba($light, .0), rgba($light, .4), rgba($light, .0))
+          animation: loading 2s ease infinite
+
+.view-all
+  @include flex($justify: center)
+  width: 100%
+  margin-top: 2rem
