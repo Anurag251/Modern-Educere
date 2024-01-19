@@ -19,6 +19,10 @@
   scroll-behavior: smooth !important
 
 :root
+  --pri: #55a960
+  --sec: #022c46
+  --prirgb: #55a960
+  --secrgb: #022c46
   --swiper-theme-color: #009248
 
 body
@@ -185,7 +189,7 @@ p
     left: 0
     height: 100%
     width: 100%
-    background-color: rgba($sec, .5)
+    background-color: rgba(var(--secrgb), .5)
     z-index: 1
 
   .page-title
@@ -226,4 +230,5 @@ div
 @import './sections/_event'
 @import './sections/_principal'
 @import './sections/_food-menu'
+@import './sections/_admission'
 @import './layout/_responsive'

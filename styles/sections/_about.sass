@@ -143,10 +143,10 @@
           line-height: 90%
           margin-top: .5rem
 
-.about-page-section
+.about-page-section, .school-visit-section
   overflow: hidden
 
-  .inner-about-page
+  .inner-about-page, .inner-school-visit
     // background-image: linear-gradient(90deg, $pri, $sec)
     border-radius: 1.1rem
     color: $dark
@@ -166,7 +166,7 @@
           margin-bottom: 1rem
           line-height: 110%
 
-      .about-message
+      .about-message, .school-visit-message
         max-width: 800px
         margin: 0 auto
 
@@ -268,7 +268,7 @@
         text-align: center
         width: 100%
         border-radius: 1rem
-        background-color: rgba($sec, .8)
+        background-color: rgba(var(--secrgb), .8)
         backdrop-filter: blur(4px)
         color: $light
         @include trans()

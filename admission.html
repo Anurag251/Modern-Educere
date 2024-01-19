@@ -35,23 +35,6 @@
             <a href="tel:98xxxxxx">98xxxxxx</a>
           </div>
 
-          <div class="auth-button">
-            <a href="#">Login</a>
-            <a href="#">Register</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="wrapper">
-        <div class="inner-header">
-          <!-- Logo -->
-          <a href="index.html" title="Modern Educere" aria-current="page">
-            <div class="logo">
-              <h1>Modern Educere</h1>
-              <p>Montessori Based School</p>
-            </div>
-          </a>
-
           <!-- Social Media Links -->
           <ul class="social-links">
             <li>
@@ -83,6 +66,23 @@
             </li>
           </ul>
 
+          <!-- <div class="auth-button">
+            <a href="#">Login</a>
+            <a href="#">Register</a>
+          </div> -->
+        </div>
+      </div>
+
+      <div class="wrapper">
+        <div class="inner-header">
+          <!-- Logo -->
+          <a href="index.html" title="Modern Educere" aria-current="page">
+            <div class="logo">
+              <h1>Modern Educere</h1>
+              <p>Montessori Based School</p>
+            </div>
+          </a>
+
           <!-- Nav Links -->
           <nav>
             <ul class="nav-links">
@@ -111,12 +111,24 @@
               </li>
 
               <li class="link">
-                <a href="admission.html" title="Admission">
-                  <button class="nav-button">Admission</button>
+                <a href="food-menu.html" title="Food Menu">
+                  <button class="nav-button">Food Menu</button>
+                </a>
+              </li>
+
+              <li class="link">
+                <a href="contact.html" title="Contacts">
+                  <button class="nav-button">Contacts</button>
                 </a>
               </li>
             </ul>
           </nav>
+
+          <div class="admission-button">
+            <a href="admission.html" title="Admission Open">
+              <button>Admission Open</button>
+            </a>
+          </div>
 
           <button
             class="search-button circle-buttton"
@@ -238,9 +250,624 @@
     </div>
     <!-- page title end -->
 
-    <section>
-      <h1 style="text-align: center; font-size: 5rem">Coming Soon</h1>
+    <!-- admission start -->
+    <section class="admission-section">
+      <div class="wrapper">
+        <div class="admission-form-area">
+          <div class="inner-form">
+            <div class="title-part no-bg">
+              <div class="name">Student Admission Form</div>
+            </div>
+
+            <p class="form-subtitle">To be completed by Parent / Guardian.</p>
+            <div class="form">
+              <form>
+                <div class="form-inputs">
+                  <div class="form-group">
+                    <h3 class="form-title">Admission Seeking in:</h3>
+                    <div class="input-group">
+                      <div class="custom-select twoLine">
+                        <ul>
+                          <li>
+                            <input
+                              class="radioButton"
+                              type="radio"
+                              id="PlayGroup"
+                              name="AdmissionSeeking"
+                              hidden
+                            />
+
+                            <label for="PlayGroup" class="button">
+                              <div class="box">
+                                <i class="fas fa-check"></i>
+                              </div>
+                              Play Group
+                            </label>
+                          </li>
+
+                          <li>
+                            <input
+                              class="radioButton"
+                              type="radio"
+                              id="Nursery"
+                              name="AdmissionSeeking"
+                              hidden
+                            />
+
+                            <label for="Nursery" class="button">
+                              <div class="box">
+                                <i class="fas fa-check"></i>
+                              </div>
+                              Nursery
+                            </label>
+                          </li>
+
+                          <li>
+                            <input
+                              class="radioButton"
+                              type="radio"
+                              id="PrepJurior"
+                              name="AdmissionSeeking"
+                              hidden
+                            />
+
+                            <label for="PrepJurior" class="button">
+                              <div class="box">
+                                <i class="fas fa-check"></i>
+                              </div>
+                              Prep. Jurior
+                            </label>
+                          </li>
+
+                          <li>
+                            <input
+                              class="radioButton"
+                              type="radio"
+                              id="PrepSenior"
+                              name="AdmissionSeeking"
+                              hidden
+                            />
+
+                            <label for="PrepSenior" class="button">
+                              <div class="box">
+                                <i class="fas fa-check"></i>
+                              </div>
+                              Prep. Senior
+                            </label>
+                          </li>
+
+                          <li>
+                            <input
+                              class="radioButton"
+                              type="radio"
+                              id="MotherToddler"
+                              name="AdmissionSeeking"
+                              hidden
+                            />
+
+                            <label for="MotherToddler" class="button">
+                              <div class="box">
+                                <i class="fas fa-check"></i>
+                              </div>
+                              Mother Toddler
+                            </label>
+                          </li>
+
+                          <li>
+                            <input
+                              class="radioButton"
+                              type="radio"
+                              id="DayCare"
+                              name="AdmissionSeeking"
+                              hidden
+                            />
+
+                            <label for="DayCare" class="button">
+                              <div class="box">
+                                <i class="fas fa-check"></i>
+                              </div>
+                              Day care
+                            </label>
+                          </li>
+
+                          <li>
+                            <input
+                              class="radioButton"
+                              type="radio"
+                              id="DayAfter"
+                              name="AdmissionSeeking"
+                              hidden
+                            />
+
+                            <label for="DayAfter" class="button">
+                              <div class="box">
+                                <i class="fas fa-check"></i>
+                              </div>
+                              Day after
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-inputs">
+                  <div class="form-group">
+                    <h3 class="form-title">Candidate's Personal Details:</h3>
+
+                    <div class="input-group threeItem">
+                      <div class="group">
+                        <div class="inner-input">
+                          <input
+                            type="text"
+                            class="custom-input"
+                            name="firstName"
+                            id="firstName"
+                            onchange="getData(this)"
+                          />
+
+                          <label class="form-input-label" for="firstName">
+                            First Name
+                          </label>
+                        </div>
+                        <p class="input-error"></p>
+                      </div>
+
+                      <div class="group">
+                        <div class="inner-input">
+                          <input
+                            type="text"
+                            class="custom-input"
+                            name="firstName"
+                            id="firstName"
+                            onchange="getData(this)"
+                          />
+
+                          <label class="form-input-label" for="firstName">
+                            Middle Name <small>(optional)</small>
+                          </label>
+                        </div>
+                        <p class="input-error"></p>
+                      </div>
+
+                      <div class="group">
+                        <div class="inner-input">
+                          <input
+                            type="text"
+                            class="custom-input"
+                            name="firstName"
+                            id="firstName"
+                            onchange="getData(this)"
+                          />
+
+                          <label class="form-input-label" for="firstName">
+                            Last Name
+                          </label>
+                        </div>
+                        <p class="input-error"></p>
+                      </div>
+                    </div>
+
+                    <div class="input-group twoItem">
+                      <div class="group">
+                        <div class="inner-input">
+                          <input
+                            type="text"
+                            class="custom-input"
+                            name="firstName"
+                            id="firstName"
+                            onchange="getData(this)"
+                          />
+
+                          <label class="form-input-label" for="firstName">
+                            Date of birth
+                          </label>
+                        </div>
+                        <p class="input-error"></p>
+                      </div>
+
+                      <div class="custom-select">
+                        <h4>Gender</h4>
+                        <ul>
+                          <li>
+                            <input
+                              class="radioButton"
+                              type="radio"
+                              id="Male"
+                              name="Gender"
+                              hidden
+                            />
+
+                            <label for="Male" class="button">
+                              <div class="box">
+                                <i class="fas fa-check"></i>
+                              </div>
+                              Male
+                            </label>
+                          </li>
+
+                          <li>
+                            <input
+                              class="radioButton"
+                              type="radio"
+                              id="Female"
+                              name="Gender"
+                              hidden
+                            />
+
+                            <label for="Female" class="button">
+                              <div class="box">
+                                <i class="fas fa-check"></i>
+                              </div>
+                              Female
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="input-group twoItem">
+                      <div class="group">
+                        <div class="inner-input">
+                          <input
+                            type="text"
+                            class="custom-input"
+                            name="firstName"
+                            id="firstName"
+                            onchange="getData(this)"
+                          />
+
+                          <label class="form-input-label" for="firstName">
+                            Nationality
+                          </label>
+                        </div>
+                        <p class="input-error"></p>
+                      </div>
+
+                      <div class="group">
+                        <div class="inner-input">
+                          <input
+                            type="text"
+                            class="custom-input"
+                            name="firstName"
+                            id="firstName"
+                            onchange="getData(this)"
+                          />
+
+                          <label class="form-input-label" for="firstName">
+                            First Language
+                          </label>
+                        </div>
+                        <p class="input-error"></p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="form-title">Residential Address:</div>
+
+                    <div class="input-group threeItem">
+                      <div class="group">
+                        <div class="inner-input">
+                          <input
+                            type="text"
+                            class="custom-input"
+                            name="firstName"
+                            id="firstName"
+                            onchange="getData(this)"
+                          />
+
+                          <label class="form-input-label" for="firstName">
+                            Country
+                          </label>
+                        </div>
+                        <p class="input-error"></p>
+                      </div>
+
+                      <div class="group">
+                        <div class="inner-input">
+                          <input
+                            type="text"
+                            class="custom-input"
+                            name="firstName"
+                            id="firstName"
+                            onchange="getData(this)"
+                          />
+
+                          <label class="form-input-label" for="firstName">
+                            City
+                          </label>
+                        </div>
+                        <p class="input-error"></p>
+                      </div>
+
+                      <div class="group">
+                        <div class="inner-input">
+                          <input
+                            type="text"
+                            class="custom-input"
+                            name="firstName"
+                            id="firstName"
+                            onchange="getData(this)"
+                          />
+
+                          <label class="form-input-label" for="firstName">
+                            Street
+                          </label>
+                        </div>
+                        <p class="input-error"></p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="form-title">Family information:</div>
+
+                    <h4 class="input-group-title">Father:</h4>
+
+                    <div class="input-group threeItem">
+                      <div class="group">
+                        <div class="inner-input">
+                          <input
+                            type="text"
+                            class="custom-input"
+                            name="firstName"
+                            id="firstName"
+                            onchange="getData(this)"
+                          />
+
+                          <label class="form-input-label" for="firstName">
+                            First Name
+                          </label>
+                        </div>
+                        <p class="input-error"></p>
+                      </div>
+
+                      <div class="group">
+                        <div class="inner-input">
+                          <input
+                            type="text"
+                            class="custom-input"
+                            name="firstName"
+                            id="firstName"
+                            onchange="getData(this)"
+                          />
+
+                          <label class="form-input-label" for="firstName">
+                            Middle Name <small>(optional)</small>
+                          </label>
+                        </div>
+                        <p class="input-error"></p>
+                      </div>
+
+                      <div class="group">
+                        <div class="inner-input">
+                          <input
+                            type="text"
+                            class="custom-input"
+                            name="firstName"
+                            id="firstName"
+                            onchange="getData(this)"
+                          />
+
+                          <label class="form-input-label" for="firstName">
+                            Last Name
+                          </label>
+                        </div>
+                        <p class="input-error"></p>
+                      </div>
+                    </div>
+
+                    <div class="input-group twoItem">
+                      <div class="group">
+                        <div class="inner-input">
+                          <input
+                            type="text"
+                            class="custom-input"
+                            name="firstName"
+                            id="firstName"
+                            onchange="getData(this)"
+                          />
+
+                          <label class="form-input-label" for="firstName">
+                            E-mail
+                          </label>
+                        </div>
+                        <p class="input-error"></p>
+                      </div>
+
+                      <div class="group">
+                        <div class="inner-input">
+                          <input
+                            type="text"
+                            class="custom-input"
+                            name="firstName"
+                            id="firstName"
+                            onchange="getData(this)"
+                          />
+
+                          <label class="form-input-label" for="firstName">
+                            Phone
+                          </label>
+                        </div>
+                        <p class="input-error"></p>
+                      </div>
+                    </div>
+
+                    <div class="input-group twoItem">
+                      <div class="group">
+                        <div class="inner-input">
+                          <input
+                            type="text"
+                            class="custom-input"
+                            name="firstName"
+                            id="firstName"
+                            onchange="getData(this)"
+                          />
+
+                          <label class="form-input-label" for="firstName">
+                            Profession
+                          </label>
+                        </div>
+                        <p class="input-error"></p>
+                      </div>
+
+                      <div class="group">
+                        <div class="inner-input">
+                          <input
+                            type="text"
+                            class="custom-input"
+                            name="firstName"
+                            id="firstName"
+                            onchange="getData(this)"
+                          />
+
+                          <label class="form-input-label" for="firstName">
+                            Educational Qualification
+                          </label>
+                        </div>
+                        <p class="input-error"></p>
+                      </div>
+                    </div>
+
+                    <h4 class="input-group-title">Mother:</h4>
+
+                    <div class="input-group threeItem">
+                      <div class="group">
+                        <div class="inner-input">
+                          <input
+                            type="text"
+                            class="custom-input"
+                            name="firstName"
+                            id="firstName"
+                            onchange="getData(this)"
+                          />
+
+                          <label class="form-input-label" for="firstName">
+                            First Name
+                          </label>
+                        </div>
+                        <p class="input-error"></p>
+                      </div>
+
+                      <div class="group">
+                        <div class="inner-input">
+                          <input
+                            type="text"
+                            class="custom-input"
+                            name="firstName"
+                            id="firstName"
+                            onchange="getData(this)"
+                          />
+
+                          <label class="form-input-label" for="firstName">
+                            Middle Name <small>(optional)</small>
+                          </label>
+                        </div>
+                        <p class="input-error"></p>
+                      </div>
+
+                      <div class="group">
+                        <div class="inner-input">
+                          <input
+                            type="text"
+                            class="custom-input"
+                            name="firstName"
+                            id="firstName"
+                            onchange="getData(this)"
+                          />
+
+                          <label class="form-input-label" for="firstName">
+                            Last Name
+                          </label>
+                        </div>
+                        <p class="input-error"></p>
+                      </div>
+                    </div>
+
+                    <div class="input-group twoItem">
+                      <div class="group">
+                        <div class="inner-input">
+                          <input
+                            type="text"
+                            class="custom-input"
+                            name="firstName"
+                            id="firstName"
+                            onchange="getData(this)"
+                          />
+
+                          <label class="form-input-label" for="firstName">
+                            E-mail <small>(optional)</small>
+                          </label>
+                        </div>
+                        <p class="input-error"></p>
+                      </div>
+
+                      <div class="group">
+                        <div class="inner-input">
+                          <input
+                            type="text"
+                            class="custom-input"
+                            name="firstName"
+                            id="firstName"
+                            onchange="getData(this)"
+                          />
+
+                          <label class="form-input-label" for="firstName">
+                            Phone
+                          </label>
+                        </div>
+                        <p class="input-error"></p>
+                      </div>
+                    </div>
+
+                    <div class="input-group twoItem">
+                      <div class="group">
+                        <div class="inner-input">
+                          <input
+                            type="text"
+                            class="custom-input"
+                            name="firstName"
+                            id="firstName"
+                            onchange="getData(this)"
+                          />
+
+                          <label class="form-input-label" for="firstName">
+                            Profession
+                          </label>
+                        </div>
+                        <p class="input-error"></p>
+                      </div>
+
+                      <div class="group">
+                        <div class="inner-input">
+                          <input
+                            type="text"
+                            class="custom-input"
+                            name="firstName"
+                            id="firstName"
+                            onchange="getData(this)"
+                          />
+
+                          <label class="form-input-label" for="firstName">
+                            Educational Qualification <small>(optional)</small>
+                          </label>
+                        </div>
+                        <p class="input-error"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <button class="custom-button">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
+    <!-- admission end -->
 
     <!-- Footer start -->
     <footer>
@@ -249,10 +876,12 @@
           <div class="footer-item">
             <div class="footer-about">
               <!-- Footer logo -->
-              <div class="logo">
-                <h1>Modern Educere</h1>
-                <p>Montessori Based School</p>
-              </div>
+              <a href="/">
+                <div class="logo">
+                  <h1>Modern Educere</h1>
+                  <p>Montessori Based School</p>
+                </div>
+              </a>
 
               <div class="short-about-school">
                 <!-- short description about school -->
@@ -267,25 +896,25 @@
                 <!-- School social links -->
                 <ul class="social-links">
                   <li>
-                    <a href="#">
+                    <a href="#" title="Facebook">
                       <i class="fab fa-facebook-f"></i>
                     </a>
                   </li>
 
                   <li>
-                    <a href="#">
+                    <a href="#" title="Twitter">
                       <i class="fab fa-x-twitter"></i>
                     </a>
                   </li>
 
                   <li>
-                    <a href="#">
+                    <a href="#" title="Instagram">
                       <i class="fab fa-instagram"></i>
                     </a>
                   </li>
 
                   <li>
-                    <a href="#">
+                    <a href="#" title="Linked in">
                       <i class="fab fa-linkedin-in"></i>
                     </a>
                   </li>
@@ -329,13 +958,13 @@
                 <a href="calendar.html">Calendar</a>
               </li>
               <li>
-                <a href="#contactSection">Location</a>
+                <a href="contact.html">Contact</a>
               </li>
               <li>
-                <a href="#foodMenuSection">Food menu</a>
+                <a href="food-menu.html">Food menu</a>
               </li>
               <li>
-                <a href="#">School visit</a>
+                <a href="school-visit.html">School visit</a>
               </li>
             </ul>
           </div>
@@ -456,7 +1085,7 @@
       });
 
       var swiper = new Swiper(".testimonials-area .mySwiper", {
-        spaceBetween: 0,
+        spaceBetween: 20,
         slidesPerView: 1,
         speed: 600,
         pagination: {

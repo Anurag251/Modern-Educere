@@ -35,23 +35,6 @@
             <a href="tel:98xxxxxx">98xxxxxx</a>
           </div>
 
-          <div class="auth-button">
-            <a href="#">Login</a>
-            <a href="#">Register</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="wrapper">
-        <div class="inner-header">
-          <!-- Logo -->
-          <a href="index.html" title="Modern Educere" aria-current="page">
-            <div class="logo">
-              <h1>Modern Educere</h1>
-              <p>Montessori Based School</p>
-            </div>
-          </a>
-
           <!-- Social Media Links -->
           <ul class="social-links">
             <li>
@@ -83,6 +66,23 @@
             </li>
           </ul>
 
+          <!-- <div class="auth-button">
+            <a href="#">Login</a>
+            <a href="#">Register</a>
+          </div> -->
+        </div>
+      </div>
+
+      <div class="wrapper">
+        <div class="inner-header">
+          <!-- Logo -->
+          <a href="index.html" title="Modern Educere" aria-current="page">
+            <div class="logo">
+              <h1>Modern Educere</h1>
+              <p>Montessori Based School</p>
+            </div>
+          </a>
+
           <!-- Nav Links -->
           <nav>
             <ul class="nav-links">
@@ -111,12 +111,24 @@
               </li>
 
               <li class="link">
-                <a href="admission.html" title="Admission">
-                  <button class="nav-button">Admission</button>
+                <a href="food-menu.html" title="Food Menu">
+                  <button class="nav-button">Food Menu</button>
+                </a>
+              </li>
+
+              <li class="link">
+                <a href="contact.html" title="Contacts">
+                  <button class="nav-button">Contacts</button>
                 </a>
               </li>
             </ul>
           </nav>
+
+          <div class="admission-button">
+            <a href="admission.html" title="Admission Open">
+              <button>Admission Open</button>
+            </a>
+          </div>
 
           <button
             class="search-button circle-buttton"
@@ -366,10 +378,12 @@
           <div class="footer-item">
             <div class="footer-about">
               <!-- Footer logo -->
-              <div class="logo">
-                <h1>Modern Educere</h1>
-                <p>Montessori Based School</p>
-              </div>
+              <a href="/">
+                <div class="logo">
+                  <h1>Modern Educere</h1>
+                  <p>Montessori Based School</p>
+                </div>
+              </a>
 
               <div class="short-about-school">
                 <!-- short description about school -->
@@ -384,25 +398,25 @@
                 <!-- School social links -->
                 <ul class="social-links">
                   <li>
-                    <a href="#">
+                    <a href="#" title="Facebook">
                       <i class="fab fa-facebook-f"></i>
                     </a>
                   </li>
 
                   <li>
-                    <a href="#">
+                    <a href="#" title="Twitter">
                       <i class="fab fa-x-twitter"></i>
                     </a>
                   </li>
 
                   <li>
-                    <a href="#">
+                    <a href="#" title="Instagram">
                       <i class="fab fa-instagram"></i>
                     </a>
                   </li>
 
                   <li>
-                    <a href="#">
+                    <a href="#" title="Linked in">
                       <i class="fab fa-linkedin-in"></i>
                     </a>
                   </li>
@@ -446,13 +460,13 @@
                 <a href="calendar.html">Calendar</a>
               </li>
               <li>
-                <a href="#contactSection">Location</a>
+                <a href="contact.html">Contact</a>
               </li>
               <li>
-                <a href="#foodMenuSection">Food menu</a>
+                <a href="food-menu.html">Food menu</a>
               </li>
               <li>
-                <a href="#">School visit</a>
+                <a href="school-visit.html">School visit</a>
               </li>
             </ul>
           </div>
@@ -573,7 +587,7 @@
       });
 
       var swiper = new Swiper(".testimonials-area .mySwiper", {
-        spaceBetween: 0,
+        spaceBetween: 20,
         slidesPerView: 1,
         speed: 600,
         pagination: {

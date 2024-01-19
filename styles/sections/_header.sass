@@ -33,6 +33,28 @@ header
         height: 100%
         @include flex($justify: center)
 
+    .social-links
+      @include flex($justify: flex-end)
+      gap: 1rem
+
+      li
+        i
+          height: 2rem
+          width: 2rem
+          border-radius: 50%
+          // border: 1px solid $dark
+          @include flex($justify: center)
+          font-size: 1rem
+          @include fastTrans()
+          color: $light
+
+        &:hover
+          i
+            background-color: $pri
+            color: $light
+            border-color: $pri
+            transform: scale(1.1)
+
     .auth-button
       a
         margin-right: 0
@@ -119,7 +141,24 @@ header
       cursor: pointer
       display: none
 
+    .admission-button
+      button
+        padding: .7rem 1.3rem
+        border-radius: 2rem
+        background-color: $pri
+        color: $light
+        font-size: 1rem
+        font-weight: 600
+        cursor: pointer
+        @include fastTrans()
+
+        &:hover
+          // background-color: $sec
+          box-shadow: 0 0 10px rgba(var(--prirgb), .7)
+          transform: scale(1.1)
+
     .search-button
+      display: none
 
 .side-nav
   position: fixed
@@ -217,7 +256,7 @@ header
 
             .nav-button
               color: $dark
-              background-color: rgba($pri, .1)
+              background-color: rgba(var(--prirgb), .1)
 
           &::after
             content: "→"
