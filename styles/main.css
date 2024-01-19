@@ -1461,6 +1461,15 @@ header .inner-header .search-button {
   width: 100%;
 }
 
+.contact-section.school-visit-map {
+  padding-top: 1rem;
+}
+.contact-section.school-visit-map .contact .contact-area {
+  grid-template-columns: 1fr;
+}
+.contact-section.school-visit-map .contact .contact-area .contact-map {
+  height: 30rem;
+}
 .contact-section .contact .contact-area {
   display: grid;
   grid-template-columns: 1fr 1fr;

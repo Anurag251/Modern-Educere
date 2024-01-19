@@ -3,6 +3,15 @@
 @use '../layout/_layout' as *
 
 .contact-section
+  &.school-visit-map
+    padding-top: 1rem
+    .contact
+      .contact-area
+        grid-template-columns: 1fr
+
+        .contact-map
+          height: 30rem
+
   .contact
     .contact-area
       @include grid($columns: 1fr 1fr)
