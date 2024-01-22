@@ -245,6 +245,7 @@
       <div class="wrapper">
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
+            <!-- banner item start -->
             <div class="swiper-slide">
               <div class="inner-banner">
                 <div class="content">
@@ -278,6 +279,7 @@
                 </div>
               </div>
             </div>
+            <!-- banner item end -->
 
             <div class="swiper-slide">
               <div class="inner-banner">
@@ -385,40 +387,6 @@
               <div class="inner-banner">
                 <div class="content">
                   <!-- Banner title -->
-                  <h1>Unlock Potential</h1>
-
-                  <!-- Banner sub title -->
-                  <p>Enroll Now for School</p>
-
-                  <a href="about.html">
-                    <button class="custom-button">
-                      <span>Learn More</span>
-                    </button>
-                  </a>
-                </div>
-
-                <div class="image-area">
-                  <!-- Banner image -->
-                  <img
-                    src="./assets/images/banner-person-image4.png"
-                    alt="person-image"
-                    class="person-image"
-                  />
-
-                  <!-- Static image background -->
-                  <img
-                    src="./assets/images/person-static-bg.png"
-                    class="person-bg"
-                    alt="person-bg"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="inner-banner">
-                <div class="content">
-                  <!-- Banner title -->
                   <h1>Inspire Growth</h1>
 
                   <!-- Banner sub title -->
@@ -470,6 +438,7 @@
       <div class="wrapper">
         <div class="inner-principal">
           <div class="principal-image">
+            <!-- principal image -->
             <img src="./assets/images/principal.jpeg" alt="principal name" />
           </div>
 
@@ -480,7 +449,7 @@
             <h4 class="role">Principal | Founder</h4>
 
             <!-- message -->
-            <p class="message">
+            <p>
               With a proven track record in educational leadership, Nilam Sherpa
               has 20 years of experience shaping the future of young minds. She
               is a dynamic and visionary leader who believes in cultivating an
@@ -502,25 +471,25 @@
               <!-- social-links -->
               <ul class="social-links">
                 <li>
-                  <a href="#">
+                  <a href="#" title="Facebook">
                     <i class="fab fa-facebook-f"></i>
                   </a>
                 </li>
 
                 <li>
-                  <a href="#">
+                  <a href="#" title="Twitter">
                     <i class="fab fa-x-twitter"></i>
                   </a>
                 </li>
 
                 <li>
-                  <a href="#">
+                  <a href="#" title="Instagram">
                     <i class="fab fa-instagram"></i>
                   </a>
                 </li>
 
                 <li>
-                  <a href="#">
+                  <a href="#" title="Linked In">
                     <i class="fab fa-linkedin-in"></i>
                   </a>
                 </li>
@@ -614,7 +583,7 @@
     </section>
     <!-- About end -->
 
-    <!-- video-popup start -->
+    <!-- testimonials video-popup start -->
     <div class="video-popup">
       <div class="popup-bg"></div>
       <div class="popup-box">
@@ -624,6 +593,7 @@
 
         <div class="popup-container">
           <div class="loader"></div>
+          <!-- youtube video link -->
           <iframe
             src="https://www.youtube.com/embed/N_vFeAxFamw?si=u2fzGVBa6jZ5zfdm"
             title="YouTube Video"
@@ -632,9 +602,9 @@
         </div>
       </div>
     </div>
-    <!-- video-popup start -->
+    <!-- testimonials video-popup start -->
 
-    <!-- Testimonials start -->
+    <!--  Testimonials start -->
     <section class="testimonials-section" id="testimonialsSection">
       <div class="wrapper">
         <div class="inner-testimonials">
@@ -1170,6 +1140,22 @@
 
     <script>
       Fancybox.bind("[data-fancybox]");
+      var swiper = new Swiper(".banner-section .mySwiper", {
+        spaceBetween: 0,
+        slidesPerView: 1,
+        effect: "fade",
+        // loop: true,
+
+        autoplay: {
+          delay: 7500,
+          disableOnInteraction: true,
+        },
+
+        navigation: {
+          nextEl: ".slide-button-next",
+          prevEl: ".slide-button-prev",
+        },
+      });
 
       var swiper = new Swiper(".event-section .mySwiper", {
         spaceBetween: 20,
@@ -1196,22 +1182,6 @@
           1100: {
             slidesPerView: 4,
           },
-        },
-      });
-
-      var swiper = new Swiper(".banner-section .mySwiper", {
-        spaceBetween: 0,
-        slidesPerView: 1,
-        effect: "fade",
-        loop: true,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: true,
-        },
-
-        navigation: {
-          nextEl: ".slide-button-next",
-          prevEl: ".slide-button-prev",
         },
       });
 

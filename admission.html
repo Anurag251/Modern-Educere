@@ -257,17 +257,21 @@
         <div class="admission-form-area">
           <div class="inner-form">
             <div class="title-part no-bg">
+              <!-- form title -->
               <div class="name">Student Admission Form</div>
             </div>
 
+            <!-- form sub title  -->
             <p class="form-subtitle">To be completed by Parent / Guardian.</p>
             <div class="form">
               <form>
                 <div class="form-inputs">
                   <div class="form-group">
+                    <!-- form section title -->
                     <h3 class="form-title">Admission Seeking in:</h3>
                     <div class="input-group">
                       <div class="custom-select twoLine">
+                        <!-- list of Programs -->
                         <ul>
                           <li>
                             <input
@@ -282,6 +286,7 @@
                               <div class="box">
                                 <i class="fas fa-check"></i>
                               </div>
+                              <!-- Programs Name -->
                               Play Group
                             </label>
                           </li>
@@ -395,6 +400,7 @@
 
                 <div class="form-inputs">
                   <div class="form-group">
+                    <!-- form section title -->
                     <h3 class="form-title">Candidate's Personal Details:</h3>
 
                     <div class="input-group threeItem">
@@ -420,12 +426,12 @@
                           <input
                             type="text"
                             class="custom-input"
-                            name="firstName"
-                            id="firstName"
+                            name="middleName"
+                            id="middleName"
                             onchange="getData(this)"
                           />
 
-                          <label class="form-input-label" for="firstName">
+                          <label class="form-input-label" for="middleName">
                             Middle Name <small>(optional)</small>
                           </label>
                         </div>
@@ -437,12 +443,12 @@
                           <input
                             type="text"
                             class="custom-input"
-                            name="firstName"
-                            id="firstName"
+                            name="lastName"
+                            id="lastName"
                             onchange="getData(this)"
                           />
 
-                          <label class="form-input-label" for="firstName">
+                          <label class="form-input-label" for="lastName">
                             Last Name
                           </label>
                         </div>
@@ -454,14 +460,14 @@
                       <div class="group">
                         <div class="inner-input">
                           <input
-                            type="text"
+                            type="date"
                             class="custom-input"
-                            name="firstName"
-                            id="firstName"
+                            name="dob"
+                            id="dob"
                             onchange="getData(this)"
                           />
 
-                          <label class="form-input-label" for="firstName">
+                          <label class="form-input-label shrink" for="dob">
                             Date of birth
                           </label>
                         </div>
@@ -514,12 +520,12 @@
                           <input
                             type="text"
                             class="custom-input"
-                            name="firstName"
-                            id="firstName"
+                            name="nationality"
+                            id="nationality"
                             onchange="getData(this)"
                           />
 
-                          <label class="form-input-label" for="firstName">
+                          <label class="form-input-label" for="nationality">
                             Nationality
                           </label>
                         </div>
@@ -531,21 +537,47 @@
                           <input
                             type="text"
                             class="custom-input"
-                            name="firstName"
-                            id="firstName"
+                            name="firstLanguage"
+                            id="firstLanguage"
                             onchange="getData(this)"
                           />
 
-                          <label class="form-input-label" for="firstName">
+                          <label class="form-input-label" for="firstLanguage">
                             First Language
                           </label>
                         </div>
                         <p class="input-error"></p>
                       </div>
                     </div>
+
+                    <div class="group uploadImageArea" id="UploadPhoto">
+                      <div class="inner-input">
+                        <input
+                          onchange="getData(this)"
+                          type="file"
+                          class="custom-input"
+                          name="forPhoto"
+                          id="forPhoto"
+                          hidden
+                        />
+
+                        <img class="preview-image" src="" alt="" />
+
+                        <label class="form-input-label" for="forPhoto">
+                          <i class="fas fa-cloud-arrow-up"></i>
+                          <br />
+                          Click to upload
+
+                          <br />
+                          Student Photo
+                        </label>
+                      </div>
+                      <p class="input-error">something went wrong</p>
+                    </div>
                   </div>
 
                   <div class="form-group">
+                    <!-- form section title -->
                     <div class="form-title">Residential Address:</div>
 
                     <div class="input-group threeItem">
@@ -554,12 +586,12 @@
                           <input
                             type="text"
                             class="custom-input"
-                            name="firstName"
-                            id="firstName"
+                            name="country"
+                            id="country"
                             onchange="getData(this)"
                           />
 
-                          <label class="form-input-label" for="firstName">
+                          <label class="form-input-label" for="country">
                             Country
                           </label>
                         </div>
@@ -571,12 +603,12 @@
                           <input
                             type="text"
                             class="custom-input"
-                            name="firstName"
-                            id="firstName"
+                            name="city"
+                            id="city"
                             onchange="getData(this)"
                           />
 
-                          <label class="form-input-label" for="firstName">
+                          <label class="form-input-label" for="city">
                             City
                           </label>
                         </div>
@@ -588,12 +620,12 @@
                           <input
                             type="text"
                             class="custom-input"
-                            name="firstName"
-                            id="firstName"
+                            name="Street"
+                            id="Street"
                             onchange="getData(this)"
                           />
 
-                          <label class="form-input-label" for="firstName">
+                          <label class="form-input-label" for="Street">
                             Street
                           </label>
                         </div>
@@ -603,6 +635,7 @@
                   </div>
 
                   <div class="form-group">
+                    <!-- form section title -->
                     <div class="form-title">Family information:</div>
 
                     <h4 class="input-group-title">Father:</h4>
@@ -613,12 +646,12 @@
                           <input
                             type="text"
                             class="custom-input"
-                            name="firstName"
-                            id="firstName"
+                            name="fatherFirstName"
+                            id="fatherFirstName"
                             onchange="getData(this)"
                           />
 
-                          <label class="form-input-label" for="firstName">
+                          <label class="form-input-label" for="fatherFirstName">
                             First Name
                           </label>
                         </div>
@@ -630,12 +663,15 @@
                           <input
                             type="text"
                             class="custom-input"
-                            name="firstName"
-                            id="firstName"
+                            name="fatherMiddleName"
+                            id="fatherMiddleName"
                             onchange="getData(this)"
                           />
 
-                          <label class="form-input-label" for="firstName">
+                          <label
+                            class="form-input-label"
+                            for="fatherMiddleName"
+                          >
                             Middle Name <small>(optional)</small>
                           </label>
                         </div>
@@ -647,12 +683,12 @@
                           <input
                             type="text"
                             class="custom-input"
-                            name="firstName"
-                            id="firstName"
+                            name="fatherLastName"
+                            id="fatherLastName"
                             onchange="getData(this)"
                           />
 
-                          <label class="form-input-label" for="firstName">
+                          <label class="form-input-label" for="fatherLastName">
                             Last Name
                           </label>
                         </div>
@@ -666,12 +702,12 @@
                           <input
                             type="text"
                             class="custom-input"
-                            name="firstName"
-                            id="firstName"
+                            name="fatherEmail"
+                            id="fatherEmail"
                             onchange="getData(this)"
                           />
 
-                          <label class="form-input-label" for="firstName">
+                          <label class="form-input-label" for="fatherEmail">
                             E-mail
                           </label>
                         </div>
@@ -683,12 +719,12 @@
                           <input
                             type="text"
                             class="custom-input"
-                            name="firstName"
-                            id="firstName"
+                            name="fatherPhone"
+                            id="fatherPhone"
                             onchange="getData(this)"
                           />
 
-                          <label class="form-input-label" for="firstName">
+                          <label class="form-input-label" for="fatherPhone">
                             Phone
                           </label>
                         </div>
@@ -702,12 +738,15 @@
                           <input
                             type="text"
                             class="custom-input"
-                            name="firstName"
-                            id="firstName"
+                            name="fatherProfession"
+                            id="fatherProfession"
                             onchange="getData(this)"
                           />
 
-                          <label class="form-input-label" for="firstName">
+                          <label
+                            class="form-input-label"
+                            for="fatherProfession"
+                          >
                             Profession
                           </label>
                         </div>
@@ -719,12 +758,15 @@
                           <input
                             type="text"
                             class="custom-input"
-                            name="firstName"
-                            id="firstName"
+                            name="fatherEducationQualification"
+                            id="fatherEducationQualification"
                             onchange="getData(this)"
                           />
 
-                          <label class="form-input-label" for="firstName">
+                          <label
+                            class="form-input-label"
+                            for="fatherEducationQualification"
+                          >
                             Educational Qualification
                           </label>
                         </div>
@@ -740,12 +782,12 @@
                           <input
                             type="text"
                             class="custom-input"
-                            name="firstName"
-                            id="firstName"
+                            name="motherFirstName"
+                            id="motherFirstName"
                             onchange="getData(this)"
                           />
 
-                          <label class="form-input-label" for="firstName">
+                          <label class="form-input-label" for="motherFirstName">
                             First Name
                           </label>
                         </div>
@@ -757,12 +799,15 @@
                           <input
                             type="text"
                             class="custom-input"
-                            name="firstName"
-                            id="firstName"
+                            name="motherMiddleName"
+                            id="motherMiddleName"
                             onchange="getData(this)"
                           />
 
-                          <label class="form-input-label" for="firstName">
+                          <label
+                            class="form-input-label"
+                            for="motherMiddleName"
+                          >
                             Middle Name <small>(optional)</small>
                           </label>
                         </div>
@@ -774,12 +819,12 @@
                           <input
                             type="text"
                             class="custom-input"
-                            name="firstName"
-                            id="firstName"
+                            name="motherLastName"
+                            id="motherLastName"
                             onchange="getData(this)"
                           />
 
-                          <label class="form-input-label" for="firstName">
+                          <label class="form-input-label" for="motherLastName">
                             Last Name
                           </label>
                         </div>
@@ -793,12 +838,12 @@
                           <input
                             type="text"
                             class="custom-input"
-                            name="firstName"
-                            id="firstName"
+                            name="motherEmail"
+                            id="motherEmail"
                             onchange="getData(this)"
                           />
 
-                          <label class="form-input-label" for="firstName">
+                          <label class="form-input-label" for="motherEmail">
                             E-mail <small>(optional)</small>
                           </label>
                         </div>
@@ -810,12 +855,12 @@
                           <input
                             type="text"
                             class="custom-input"
-                            name="firstName"
-                            id="firstName"
+                            name="motherPhone"
+                            id="motherPhone"
                             onchange="getData(this)"
                           />
 
-                          <label class="form-input-label" for="firstName">
+                          <label class="form-input-label" for="motherPhone">
                             Phone
                           </label>
                         </div>
@@ -829,12 +874,15 @@
                           <input
                             type="text"
                             class="custom-input"
-                            name="firstName"
-                            id="firstName"
+                            name="motherProfession"
+                            id="motherProfession"
                             onchange="getData(this)"
                           />
 
-                          <label class="form-input-label" for="firstName">
+                          <label
+                            class="form-input-label"
+                            for="motherProfession"
+                          >
                             Profession
                           </label>
                         </div>
@@ -846,12 +894,15 @@
                           <input
                             type="text"
                             class="custom-input"
-                            name="firstName"
-                            id="firstName"
+                            name="motherEducationalQualification"
+                            id="motherEducationalQualification"
                             onchange="getData(this)"
                           />
 
-                          <label class="form-input-label" for="firstName">
+                          <label
+                            class="form-input-label"
+                            for="motherEducationalQualification"
+                          >
                             Educational Qualification <small>(optional)</small>
                           </label>
                         </div>
@@ -861,6 +912,7 @@
                   </div>
                 </div>
 
+                <!-- form submit CTA -->
                 <button class="custom-button">Submit</button>
               </form>
             </div>

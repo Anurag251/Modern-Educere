@@ -70,17 +70,83 @@ const videoPopupOpen = document.querySelector(".video-play-button");
 const videoPopupBg = document.querySelector(".popup-bg");
 const videoPopupClose = document.querySelector(".popup-close");
 
-videoPopupOpen.addEventListener("click", () => {
-  videoPopup.classList.add("active");
-  videoPopup.querySelector("iframe").style.display = "block";
+if (videoPopup) {
+  videoPopupOpen.addEventListener("click", () => {
+    videoPopup.classList.add("active");
+    videoPopup.querySelector("iframe").style.display = "block";
+  });
+
+  videoPopupBg.addEventListener("click", () => {
+    videoPopup.classList.remove("active");
+    videoPopup.querySelector("iframe").style.display = "none";
+  });
+
+  videoPopupClose.addEventListener("click", () => {
+    videoPopup.classList.remove("active");
+    videoPopup.querySelector("iframe").style.display = "none";
+  });
+}
+
+// input shring code
+let formInputLabels = document.querySelectorAll(".form-input-label");
+let customInputs = document.querySelectorAll(
+  ".admission-section .custom-input"
+);
+let customInputLabels = document.querySelectorAll(
+  ".admission-section .form-input-label"
+);
+
+if (customInputs.length) {
+  customInputs.forEach((customInput, idx) => {
+    if (customInput.value.length) {
+      customInputLabels[idx].classList.add("shrink");
+    }
+  });
+}
+
+const getData = (data) => {
+  formInputLabels.forEach((formInputLabel, idx) => {
+    let dataAttributeName = data.getAttribute("name");
+    let labelAttributeName = formInputLabel.getAttribute("for");
+
+    if (dataAttributeName === labelAttributeName) {
+      if (data.getAttribute("name") === dataAttributeName) {
+        if (data.value.length) {
+          formInputLabel.classList.add("shrink");
+        } else {
+          formInputLabel.classList.remove("shrink");
+        }
+      }
+    }
+  });
+};
+
+// upload image
+const uploadPersoalImageButton = document.querySelector("#UploadPhoto");
+const uploadPersoalImageInput = document.querySelector(
+  "#UploadPhoto .custom-input"
+);
+
+const uploadPersoalImage = document.querySelector("#UploadPhoto img");
+
+uploadPersoalImageButton.addEventListener("click", () => {
+  uploadPersoalImageInput.click();
 });
 
-videoPopupBg.addEventListener("click", () => {
-  videoPopup.classList.remove("active");
-  videoPopup.querySelector("iframe").style.display = "none";
-});
+uploadPersoalImageInput.addEventListener("change", function () {
+  uploadPersoalImageButton.classList.add("active");
+  const selectedFile = uploadPersoalImageInput.files[0];
 
-videoPopupClose.addEventListener("click", () => {
-  videoPopup.classList.remove("active");
-  videoPopup.querySelector("iframe").style.display = "none";
+  if (selectedFile) {
+    const reader = new FileReader();
+
+    reader.onload = function (e) {
+      uploadPersoalImage.src = e.target.result;
+    };
+
+    reader.readAsDataURL(selectedFile);
+  } else {
+    // Clear the image preview if no file is selected
+    uploadPersoalImage.src = "";
+  }
 });

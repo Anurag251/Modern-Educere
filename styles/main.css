@@ -566,6 +566,7 @@ header .inner-header .search-button {
   position: relative;
   background-color: var(--sec);
   padding: 0;
+  overflow: hidden;
 }
 .banner-section::after {
   content: "";
@@ -2636,9 +2637,11 @@ footer .copyright h5 {
 }
 .admission-section .custom-select ul li input[type=radio]:checked ~ .button {
   background-color: var(--pri);
+  color: #FFFFFF;
 }
 .admission-section .custom-select ul li input[type=radio]:checked ~ .button .box i {
   display: block;
+  color: #1F1F1F;
 }
 .admission-section .custom-select ul li .button {
   display: flex;
@@ -2746,6 +2749,69 @@ footer .copyright h5 {
 .admission-section .group.error label {
   color: #A00000;
 }
+.admission-section .group.uploadImageArea {
+  height: 11rem;
+  width: 10rem;
+  border: 1px dashed rgba(31, 31, 31, 0.6);
+  border-radius: 0.3rem;
+  cursor: pointer;
+  overflow: hidden;
+}
+.admission-section .group.uploadImageArea.active {
+  border-style: solid;
+}
+.admission-section .group.uploadImageArea.active .preview-image {
+  display: block;
+}
+.admission-section .group.uploadImageArea.active:hover label {
+  opacity: 1;
+  color: #FFFFFF;
+  transform: translateY(0);
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+.admission-section .group.uploadImageArea.active:hover label::before {
+  display: block;
+}
+.admission-section .group.uploadImageArea.active label {
+  opacity: 0;
+}
+.admission-section .group.uploadImageArea label {
+  text-align: center !important;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.admission-section .group.uploadImageArea label::after {
+  display: none;
+}
+.admission-section .group.uploadImageArea label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  z-index: -1;
+  display: none;
+}
+.admission-section .group.uploadImageArea label i {
+  font-size: 2rem;
+}
+.admission-section .group .preview-image {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: none;
+}
 .admission-section .group .input-error {
   position: absolute;
   bottom: -1.2rem;
@@ -2783,7 +2849,7 @@ footer .copyright h5 {
   background-color: #FFFFFF;
   z-index: -1;
 }
-.admission-section .group label.active, .admission-section .group label.autoActive {
+.admission-section .group label.shrink, .admission-section .group label.autoActive {
   top: 0;
   transform: translateY(-50%);
   font-size: 0.77rem;
@@ -2869,10 +2935,32 @@ footer .copyright h5 {
   .wrapper {
     max-width: 1000px;
   }
+  header .inner-header {
+    height: 65px;
+  }
+  header .inner-header .logo {
+    width: 11rem;
+  }
+  header .inner-header .logo h1 {
+    font-size: 1.2rem;
+  }
+  header .inner-header .logo p {
+    font-size: 0.7rem;
+  }
+  header .inner-header nav .nav-links .link .nav-button {
+    padding: 0 0.6rem;
+    font-size: 0.8rem;
+  }
+  header .inner-header .admission-button button {
+    padding: 0.55rem 1rem;
+    font-size: 0.8rem;
+  }
   .gallery-section .gallery .list {
     --n: 5;
     --m: 3;
   }
+}
+@media only screen and (max-width: 1055px) {
   .wrapper {
     max-width: 900px;
   }
@@ -2881,10 +2969,26 @@ footer .copyright h5 {
   .wrapper {
     max-width: 800px;
   }
+  header .inner-header nav, header .inner-header .admission-button {
+    display: none;
+  }
+  header .inner-header .side-nav-button {
+    display: block;
+  }
+  .principal-section .inner-principal {
+    grid-template-columns: 1fr;
+  }
+  .principal-section .inner-principal .principal-image {
+    width: 50%;
+    height: 25rem;
+  }
 }
 @media only screen and (max-width: 800px) {
   .wrapper {
     max-width: 600px;
+  }
+  .principal-section .inner-principal .principal-image {
+    width: 60%;
   }
   .gallery-section .gallery .list {
     --n: 5;
@@ -2897,9 +3001,31 @@ footer .copyright h5 {
   .wrapper {
     max-width: 500px;
   }
+  .principal-section .inner-principal .principal-image {
+    width: 65%;
+    height: 22rem;
+  }
+  .principal-section .inner-principal .about-principal h2 {
+    font-size: 2.3rem;
+  }
+  .principal-section .inner-principal .about-principal h4 {
+    font-size: 1.1rem;
+  }
+  .principal-section .inner-principal .about-principal p {
+    font-size: 0.9rem;
+  }
 }
 @media only screen and (max-width: 440px) {
+  .principal-section .inner-principal .principal-image {
+    width: 85%;
+  }
   .gallery-section .gallery .list {
     --n: 10 /* number of rows*/;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .principal-section .inner-principal .principal-image {
+    width: 100%;
+    height: 20rem;
   }
 }/*# sourceMappingURL=main.css.map */
