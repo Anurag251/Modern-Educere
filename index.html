@@ -27,6 +27,7 @@
 
   <body>
     <!-- Header start -->
+    <div id="colorCode" primaryColor="#55a960" secondaryColor="#022c46"></div>
     <header>
       <div class="header-top">
         <div class="wrapper">
@@ -276,6 +277,187 @@
                   />
                 </div>
               </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="inner-banner">
+                <div class="content">
+                  <!-- Banner title -->
+                  <h1>Futures Begin Here</h1>
+
+                  <!-- Banner sub title -->
+                  <p>School Admissions Open!</p>
+
+                  <a href="about.html">
+                    <button class="custom-button">
+                      <span>Learn More</span>
+                    </button>
+                  </a>
+                </div>
+
+                <div class="image-area">
+                  <!-- Banner image -->
+                  <img
+                    src="./assets/images/banner-person-image1.png"
+                    alt="person-image"
+                    class="person-image"
+                  />
+
+                  <!-- Static image background -->
+                  <img
+                    src="./assets/images/person-static-bg.png"
+                    class="person-bg"
+                    alt="person-bg"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="inner-banner">
+                <div class="content">
+                  <!-- Banner title -->
+                  <h1>Elevate Learning</h1>
+
+                  <!-- Banner sub title -->
+                  <p>School Success Awaits!</p>
+
+                  <a href="about.html">
+                    <button class="custom-button">
+                      <span>Learn More</span>
+                    </button>
+                  </a>
+                </div>
+
+                <div class="image-area">
+                  <!-- Banner image -->
+                  <img
+                    src="./assets/images/banner-person-image2.png"
+                    alt="person-image"
+                    class="person-image"
+                  />
+
+                  <!-- Static image background -->
+                  <img
+                    src="./assets/images/person-static-bg.png"
+                    class="person-bg"
+                    alt="person-bg"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="inner-banner">
+                <div class="content">
+                  <!-- Banner title -->
+                  <h1>Ignite Minds</h1>
+
+                  <!-- Banner sub title -->
+                  <p>Join Our School Community.</p>
+
+                  <a href="about.html">
+                    <button class="custom-button">
+                      <span>Learn More</span>
+                    </button>
+                  </a>
+                </div>
+
+                <div class="image-area">
+                  <!-- Banner image -->
+                  <img
+                    src="./assets/images/banner-person-image3.png"
+                    alt="person-image"
+                    class="person-image"
+                  />
+
+                  <!-- Static image background -->
+                  <img
+                    src="./assets/images/person-static-bg.png"
+                    class="person-bg"
+                    alt="person-bg"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="inner-banner">
+                <div class="content">
+                  <!-- Banner title -->
+                  <h1>Unlock Potential</h1>
+
+                  <!-- Banner sub title -->
+                  <p>Enroll Now for School</p>
+
+                  <a href="about.html">
+                    <button class="custom-button">
+                      <span>Learn More</span>
+                    </button>
+                  </a>
+                </div>
+
+                <div class="image-area">
+                  <!-- Banner image -->
+                  <img
+                    src="./assets/images/banner-person-image4.png"
+                    alt="person-image"
+                    class="person-image"
+                  />
+
+                  <!-- Static image background -->
+                  <img
+                    src="./assets/images/person-static-bg.png"
+                    class="person-bg"
+                    alt="person-bg"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="inner-banner">
+                <div class="content">
+                  <!-- Banner title -->
+                  <h1>Inspire Growth</h1>
+
+                  <!-- Banner sub title -->
+                  <p>Choose Our School Today.</p>
+
+                  <a href="about.html">
+                    <button class="custom-button">
+                      <span>Learn More</span>
+                    </button>
+                  </a>
+                </div>
+
+                <div class="image-area">
+                  <!-- Banner image -->
+                  <img
+                    src="./assets/images/banner-person-image5.png"
+                    alt="person-image"
+                    class="person-image"
+                  />
+
+                  <!-- Static image background -->
+                  <img
+                    src="./assets/images/person-static-bg.png"
+                    class="person-bg"
+                    alt="person-bg"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- slide navigate buttons -->
+          <div class="slide-button-group">
+            <div class="slide-button-prev circle-buttton opp">
+              <i class="fas fa-arrow-left"></i>
+            </div>
+
+            <div class="slide-button-next circle-buttton">
+              <i class="fas fa-arrow-right"></i>
             </div>
           </div>
         </div>
@@ -1017,38 +1199,15 @@
         },
       });
 
-      var swiper = new Swiper(".program-section .mySwiper", {
-        spaceBetween: 20,
-        slidesPerView: 1,
-        speed: 600,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".slide-button-next",
-          prevEl: ".slide-button-prev",
-        },
-        breakpoints: {
-          340: {
-            slidesPerView: 2,
-          },
-          600: {
-            slidesPerView: 3,
-          },
-          800: {
-            slidesPerView: 2,
-          },
-          1100: {
-            slidesPerView: 4,
-          },
-        },
-      });
-
       var swiper = new Swiper(".banner-section .mySwiper", {
         spaceBetween: 0,
         slidesPerView: 1,
-        speed: 600,
+        effect: "fade",
+        loop: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: true,
+        },
 
         navigation: {
           nextEl: ".slide-button-next",
@@ -1067,34 +1226,6 @@
         navigation: {
           nextEl: ".slide-button-next",
           prevEl: ".slide-button-prev",
-        },
-      });
-
-      var swiper = new Swiper(".affiliations-list .mySwiper", {
-        spaceBetween: 10,
-        slidesPerView: 1,
-        speed: 600,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".slide-button-next",
-          prevEl: ".slide-button-prev",
-        },
-        breakpoints: {
-          340: {
-            slidesPerView: 2,
-          },
-          600: {
-            slidesPerView: 3,
-          },
-          800: {
-            slidesPerView: 2,
-          },
-          1100: {
-            slidesPerView: 4,
-          },
         },
       });
     </script>

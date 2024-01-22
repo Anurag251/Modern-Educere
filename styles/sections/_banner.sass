@@ -77,6 +77,58 @@
     border: 1.6rem solid #32A9BA
     animation: floatingObj3 6s ease-in-out infinite
 
+  .slide-button-group
+    position: absolute
+    top: 50%
+    left: 0
+    width: 100%
+    @include flex($justify: space-between)
+    padding: 0 2rem
+    gap: .5rem
+    z-index: 10
+
+    .slide-button-next, .slide-button-prev
+      height: 4rem
+      width: 4rem
+
+      &::after
+        border-color: $light
+      i
+        background-color: $light
+        color: $pri
+        font-size: 1.5rem
+
+  .swiper-slide, .swiper-wrapper
+    height: 100%
+    width: 100%
+    @include flex($justify: center)
+    align-items: flex-end
+
+  .swiper-slide-active
+    .inner-banner
+      .content
+        h1, h2, h3
+          transform: translateY(0) scale(1)
+          filter: blur(0)
+          opacity: 1
+
+        p
+          transform: translateY(0) scale(1)
+          filter: blur(0)
+          opacity: 1
+
+        .custom-button
+          opacity: 1
+          transform: scale(1)
+
+      .image-area
+        .person-image, .person-bg
+          opacity: 1
+          filter: blur(0)
+
+        .person-bg
+          transform: translateX(-50%) scale(1)
+
   .inner-banner
     // background-image: linear-gradient(90deg, $pri, $sec)
     border-radius: 1.1rem
@@ -101,6 +153,11 @@
         line-height: 90%
         color: $light
         text-shadow: 0 2px 8px rgba($dark, .4)
+        @include trans()
+        transform: translateY(-14px) scale(1.3)
+        filter: blur(10px)
+        transition-delay: .3s
+        opacity: 0
 
       h2
         font-size: 2.5rem
@@ -115,9 +172,19 @@
         color: $light
         font-family: 'Satisfy', cursive
         text-decoration: underline
+        text-transform: lowercase
+        @include trans()
+        transform: translateY(14px) scale(1.3)
+        filter: blur(10px)
+        transition-delay: .6s
+        opacity: 0
 
       .custom-button
         margin-top: 1rem
+        opacity: 0
+        transform: scale(1.4)
+        @include trans()
+        transition-delay: .7s
 
         &:hover
           background-color: $light
@@ -128,22 +195,30 @@
       height: 100%
       width: 100%
       z-index: 1
+      @include flex($justify: center)
+      align-items: flex-end
 
       .person-bg
         position: absolute
         left: 50%
-        transform: translateX(-50%)
+        transform: translateX(-50%) scale(1.5)
         top: 3rem
         height: 35rem
         width: 35rem
         object-fit: contain
         z-index: 1
+        @include trans()
+        opacity: 0
+        transition-delay: .8s
+        filter: blur(4px)
 
       .person-image
-        position: absolute
-        right: 0
-        bottom: 0
         height: 40rem
         width: 100%
         object-fit: contain
+        object-position: bottom
         z-index: 2
+        opacity: 0
+        transition: 2s
+        transition-delay: 1s
+        filter: blur(4px)

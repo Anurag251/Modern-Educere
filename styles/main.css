@@ -640,6 +640,59 @@ header .inner-header .search-button {
   border: 1.6rem solid #32A9BA;
   animation: floatingObj3 6s ease-in-out infinite;
 }
+.banner-section .slide-button-group {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  gap: 0.5rem;
+  z-index: 10;
+}
+.banner-section .slide-button-group .slide-button-next, .banner-section .slide-button-group .slide-button-prev {
+  height: 4rem;
+  width: 4rem;
+}
+.banner-section .slide-button-group .slide-button-next::after, .banner-section .slide-button-group .slide-button-prev::after {
+  border-color: #FFFFFF;
+}
+.banner-section .slide-button-group .slide-button-next i, .banner-section .slide-button-group .slide-button-prev i {
+  background-color: #FFFFFF;
+  color: var(--pri);
+  font-size: 1.5rem;
+}
+.banner-section .swiper-slide, .banner-section .swiper-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-end;
+}
+.banner-section .swiper-slide-active .inner-banner .content h1, .banner-section .swiper-slide-active .inner-banner .content h2, .banner-section .swiper-slide-active .inner-banner .content h3 {
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+  opacity: 1;
+}
+.banner-section .swiper-slide-active .inner-banner .content p {
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+  opacity: 1;
+}
+.banner-section .swiper-slide-active .inner-banner .content .custom-button {
+  opacity: 1;
+  transform: scale(1);
+}
+.banner-section .swiper-slide-active .inner-banner .image-area .person-image, .banner-section .swiper-slide-active .inner-banner .image-area .person-bg {
+  opacity: 1;
+  filter: blur(0);
+}
+.banner-section .swiper-slide-active .inner-banner .image-area .person-bg {
+  transform: translateX(-50%) scale(1);
+}
 .banner-section .inner-banner {
   border-radius: 1.1rem;
   color: #FFFFFF;
@@ -664,6 +717,11 @@ header .inner-header .search-button {
   line-height: 90%;
   color: #FFFFFF;
   text-shadow: 0 2px 8px rgba(31, 31, 31, 0.4);
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  transform: translateY(-14px) scale(1.3);
+  filter: blur(10px);
+  transition-delay: 0.3s;
+  opacity: 0;
 }
 .banner-section .inner-banner .content h2 {
   font-size: 2.5rem;
@@ -678,9 +736,19 @@ header .inner-header .search-button {
   color: #FFFFFF;
   font-family: "Satisfy", cursive;
   text-decoration: underline;
+  text-transform: lowercase;
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  transform: translateY(14px) scale(1.3);
+  filter: blur(10px);
+  transition-delay: 0.6s;
+  opacity: 0;
 }
 .banner-section .inner-banner .content .custom-button {
   margin-top: 1rem;
+  opacity: 0;
+  transform: scale(1.4);
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  transition-delay: 0.7s;
 }
 .banner-section .inner-banner .content .custom-button:hover {
   background-color: #FFFFFF;
@@ -691,27 +759,38 @@ header .inner-header .search-button {
   height: 100%;
   width: 100%;
   z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-end;
 }
 .banner-section .inner-banner .image-area .person-bg {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) scale(1.5);
   top: 3rem;
   height: 35rem;
   width: 35rem;
   -o-object-fit: contain;
      object-fit: contain;
   z-index: 1;
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  opacity: 0;
+  transition-delay: 0.8s;
+  filter: blur(4px);
 }
 .banner-section .inner-banner .image-area .person-image {
-  position: absolute;
-  right: 0;
-  bottom: 0;
   height: 40rem;
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+  -o-object-position: bottom;
+     object-position: bottom;
   z-index: 2;
+  opacity: 0;
+  transition: 2s;
+  transition-delay: 1s;
+  filter: blur(4px);
 }
 
 .about-section {

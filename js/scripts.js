@@ -43,6 +43,7 @@ $(document).ready(function () {
 });
 
 // dynamic color
+const colorCode = document.getElementById("colorCode");
 function hexToRgb(hex) {
   hex = hex.replace(/^#/, "");
   const bigint = parseInt(hex, 16);
@@ -53,8 +54,8 @@ function hexToRgb(hex) {
   return `${r}, ${g}, ${b}`;
 }
 
-const priColor = "#55a960";
-const secColor = "#022c46";
+const priColor = colorCode.getAttribute("primaryColor");
+const secColor = colorCode.getAttribute("secondaryColor");
 const priRGB = hexToRgb(priColor);
 const secRGB = hexToRgb(secColor);
 
