@@ -9,13 +9,12 @@
 
   .inner-testimonials
     @include flex($justify: stretch)
-    align-items: flex-start
-    height: 40rem
+    align-items: stretch
+    height: 100%
 
     .testimonials-video-area
       flex: 50%
       max-width: 50%
-      height: 100%
       position: relative
       @include bgImage()
       @include flex($justify: center)
@@ -142,9 +141,9 @@
             &:hover
               transform: scale(1.1)
 
-            // &.swiper-button-disabled
-            //   opacity: .5
-            //   pointer-events: none
+            &.swiper-button-disabled
+              opacity: .5
+              pointer-events: none
 
       .testimonial-item
         .ratings

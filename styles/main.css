@@ -441,7 +441,7 @@ header .inner-header .search-button {
 .side-nav .side-nav-inner {
   position: relative;
   height: 100%;
-  width: 13rem;
+  width: 19rem;
   left: -15rem;
   background-color: #FFFFFF;
   display: flex;
@@ -476,9 +476,19 @@ header .inner-header .search-button {
   background: #a00000;
   color: #FFFFFF;
 }
-.side-nav .side-nav-inner .logo {
+.side-nav .side-nav-inner .nav-logo-sec {
   width: 100%;
-  overflow: hidden;
+}
+.side-nav .side-nav-inner .logo {
+  color: var(--pri);
+  padding: 0 0.5rem;
+}
+.side-nav .side-nav-inner .logo h1 {
+  font-size: 1.4rem;
+  line-height: 130%;
+}
+.side-nav .side-nav-inner .logo p {
+  font-size: 0.8rem;
 }
 .side-nav .side-nav-inner .logo .logo-image {
   height: 100%;
@@ -487,7 +497,6 @@ header .inner-header .search-button {
      object-fit: cover;
   -o-object-fit: contain;
      object-fit: contain;
-  border-radius: 0.4rem;
 }
 .side-nav .side-nav-inner nav {
   display: flex;
@@ -501,6 +510,7 @@ header .inner-header .search-button {
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+  align-items: flex-start;
   width: 100%;
 }
 .side-nav .side-nav-inner nav .nav-links .link {
@@ -534,6 +544,24 @@ header .inner-header .search-button {
   border-radius: 0.4rem;
   padding-left: 3rem;
 }
+.side-nav .side-nav-inner .contact-info {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+}
+.side-nav .side-nav-inner .contact-info button {
+  color: #1F1F1F;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.side-nav .side-nav-inner .contact-info button i {
+  margin-right: 0.2rem;
+}
 .side-nav .side-nav-inner .social-links {
   position: absolute;
   bottom: 1rem;
@@ -564,7 +592,7 @@ header .inner-header .search-button {
 
 .banner-section {
   position: relative;
-  background-color: var(--sec);
+  background-color: var(--pri);
   padding: 0;
   overflow: hidden;
 }
@@ -643,7 +671,7 @@ header .inner-header .search-button {
 }
 .banner-section .slide-button-group {
   position: absolute;
-  top: 50%;
+  bottom: 1rem;
   left: 0;
   width: 100%;
   display: flex;
@@ -664,6 +692,10 @@ header .inner-header .search-button {
   background-color: #FFFFFF;
   color: var(--pri);
   font-size: 1.5rem;
+}
+.banner-section .slide-button-group .slide-button-next.swiper-button-disabled, .banner-section .slide-button-group .slide-button-prev.swiper-button-disabled {
+  opacity: 0.5;
+  pointer-events: none;
 }
 .banner-section .swiper-slide, .banner-section .swiper-wrapper {
   height: 100%;
@@ -750,10 +782,12 @@ header .inner-header .search-button {
   transform: scale(1.4);
   transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
   transition-delay: 0.7s;
+  background-color: #FFFFFF;
+  color: var(--pri);
 }
 .banner-section .inner-banner .content .custom-button:hover {
-  background-color: #FFFFFF;
-  color: #1F1F1F;
+  background-color: var(--sec);
+  color: #FFFFFF;
 }
 .banner-section .inner-banner .image-area {
   position: relative;
@@ -781,7 +815,8 @@ header .inner-header .search-button {
   filter: blur(4px);
 }
 .banner-section .inner-banner .image-area .person-image {
-  height: 40rem;
+  max-height: 40rem;
+  height: 100%;
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
@@ -1216,13 +1251,12 @@ header .inner-header .search-button {
   display: flex;
   justify-content: stretch;
   align-items: center;
-  align-items: flex-start;
-  height: 40rem;
+  align-items: stretch;
+  height: 100%;
 }
 .testimonials-section .inner-testimonials .testimonials-video-area {
   flex: 50%;
   max-width: 50%;
-  height: 100%;
   position: relative;
   background-position: center;
   background-size: cover;
@@ -1367,6 +1401,10 @@ header .inner-header .search-button {
 }
 .testimonials-section .inner-testimonials .testimonials-area .swiper .slide-button-group .slide-button-next:hover, .testimonials-section .inner-testimonials .testimonials-area .swiper .slide-button-group .slide-button-prev:hover {
   transform: scale(1.1);
+}
+.testimonials-section .inner-testimonials .testimonials-area .swiper .slide-button-group .slide-button-next.swiper-button-disabled, .testimonials-section .inner-testimonials .testimonials-area .swiper .slide-button-group .slide-button-prev.swiper-button-disabled {
+  opacity: 0.5;
+  pointer-events: none;
 }
 .testimonials-section .inner-testimonials .testimonials-area .testimonial-item .ratings {
   margin-top: 0.5rem;
@@ -2078,6 +2116,10 @@ footer .copyright h5 {
 }
 .event-section .event-list .swiper .slide-button-group .slide-button-next:hover, .event-section .event-list .swiper .slide-button-group .slide-button-prev:hover {
   transform: scale(1.1);
+}
+.event-section .event-list .swiper .slide-button-group .slide-button-next.swiper-button-disabled, .event-section .event-list .swiper .slide-button-group .slide-button-prev.swiper-button-disabled {
+  opacity: 0.5;
+  pointer-events: none;
 }
 .event-section .event-list .event-item {
   border-radius: 1rem;
@@ -2959,6 +3001,79 @@ footer .copyright h5 {
     --n: 5;
     --m: 3;
   }
+  .about-section .inner-about .content .about-title-area h1 {
+    font-size: 2.6rem;
+    margin-bottom: 0.7rem;
+  }
+  .about-section .inner-about .content h2 {
+    font-size: 1.2rem;
+  }
+  .about-section .inner-about .content h3 {
+    font-size: 1.2rem;
+  }
+  .about-section .inner-about .content p {
+    line-height: 170%;
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+  }
+  .about-section .inner-about .content .more-details {
+    margin-bottom: 0.8rem;
+  }
+  .about-section .inner-about .content .more-details li .icon {
+    height: 3rem;
+    width: 3rem;
+  }
+  .about-section .inner-about .content .more-details li h4 {
+    font-size: 1rem;
+  }
+  .about-section .inner-about .image-area::before {
+    height: 25rem;
+    width: 25rem;
+  }
+  .about-section .inner-about .image-area::after {
+    border: 0.8rem solid #FFFFFF;
+    height: 13rem;
+    width: 13rem;
+  }
+  .about-section .inner-about .image-area .icon {
+    height: 13rem;
+    width: 13rem;
+  }
+  .about-section .inner-about .image-area .about-image {
+    height: 25rem;
+    width: 25rem;
+  }
+  .about-section .inner-about .image-area .trusted-by {
+    top: 64%;
+    left: 0%;
+    height: 8rem;
+    width: 8rem;
+  }
+  .about-section .inner-about .image-area .trusted-by h5 {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 1.7px;
+  }
+  .about-section .inner-about .image-area .trusted-by h3 {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+  }
+  .banner-section .inner-banner .content {
+    padding: 7rem 0;
+  }
+  .banner-section .inner-banner .content h1, .banner-section .inner-banner .content h2, .banner-section .inner-banner .content h3 {
+    font-size: 5rem;
+  }
+  .banner-section .inner-banner .content p {
+    font-size: 2rem;
+  }
+  .banner-section .inner-banner .image-area .person-bg {
+    height: 25rem;
+    width: 25rem;
+  }
+  .banner-section .inner-banner .image-area .person-image {
+    max-height: 30rem;
+  }
 }
 @media only screen and (max-width: 1055px) {
   .wrapper {
@@ -2975,6 +3090,33 @@ footer .copyright h5 {
   header .inner-header .side-nav-button {
     display: block;
   }
+  .banner-section .slide-button-group .slide-button-next, .banner-section .slide-button-group .slide-button-prev {
+    height: 3rem;
+    width: 3rem;
+  }
+  .banner-section .slide-button-group .slide-button-next i, .banner-section .slide-button-group .slide-button-prev i {
+    font-size: 1.1rem;
+  }
+  .banner-section .inner-banner .content {
+    padding: 5rem 0;
+  }
+  .banner-section .inner-banner .content h1, .banner-section .inner-banner .content h2, .banner-section .inner-banner .content h3 {
+    font-size: 4rem;
+  }
+  .banner-section .inner-banner .content p {
+    font-size: 1.5rem;
+  }
+  .banner-section .inner-banner .content .custom-button {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+  }
+  .banner-section .inner-banner .image-area .person-bg {
+    height: 20rem;
+    width: 20rem;
+  }
+  .banner-section .inner-banner .image-area .person-image {
+    max-height: 25rem;
+  }
   .principal-section .inner-principal {
     grid-template-columns: 1fr;
   }
@@ -2982,10 +3124,51 @@ footer .copyright h5 {
     width: 50%;
     height: 25rem;
   }
+  .about-section .inner-about {
+    grid-template-columns: 1fr;
+  }
+  .testimonials-section .inner-testimonials {
+    flex-direction: column;
+  }
+  .testimonials-section .inner-testimonials .testimonials-video-area {
+    flex: 100%;
+    max-width: 100%;
+    min-height: 25rem;
+  }
+  .testimonials-section .inner-testimonials .testimonials-area {
+    flex: 100%;
+    max-width: 100%;
+  }
+  footer .footer-inner {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 @media only screen and (max-width: 800px) {
   .wrapper {
     max-width: 600px;
+  }
+  .banner-section .slide-button-group .slide-button-next, .banner-section .slide-button-group .slide-button-prev {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+  .banner-section .slide-button-group .slide-button-next i, .banner-section .slide-button-group .slide-button-prev i {
+    font-size: 1rem;
+  }
+  .banner-section .inner-banner .content {
+    padding: 4rem 0;
+  }
+  .banner-section .inner-banner .content h1, .banner-section .inner-banner .content h2, .banner-section .inner-banner .content h3 {
+    font-size: 3rem;
+  }
+  .banner-section .inner-banner .content p {
+    font-size: 1.2rem;
+  }
+  .banner-section .inner-banner .image-area .person-bg {
+    height: 17rem;
+    width: 17rem;
+  }
+  .banner-section .inner-banner .image-area .person-image {
+    max-height: 20rem;
   }
   .principal-section .inner-principal .principal-image {
     width: 60%;
@@ -3001,6 +3184,88 @@ footer .copyright h5 {
   .wrapper {
     max-width: 500px;
   }
+  header .header-top {
+    display: none;
+  }
+  .section-title {
+    padding: 4rem 0;
+    margin-bottom: 3rem;
+  }
+  .section-title h2 {
+    font-size: 2rem;
+  }
+  .page-title-section {
+    height: 14rem;
+  }
+  .page-title-section .page-title h5 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+  }
+  .page-title-section .page-title h5 a {
+    color: #FFFFFF;
+  }
+  .page-title-section .page-title h5 a:hover {
+    color: var(--pri);
+  }
+  .page-title-section .page-title h2 {
+    font-size: 4rem;
+    line-height: 3.8rem;
+    text-transform: uppercase;
+  }
+  @keyframes floatingObj1 {
+    0% {
+      left: 1rem;
+      top: 3rem;
+    }
+    100% {
+      left: 3rem;
+      top: 1rem;
+    }
+  }
+  .banner-section .floating-obj1 {
+    left: 4.5rem;
+    top: 4.5rem;
+    height: 4rem;
+    width: 4rem;
+  }
+  .banner-section .floating-obj2 {
+    height: 1.3rem;
+    width: 1.3rem;
+  }
+  .banner-section .floating-obj3 {
+    height: 4rem;
+    width: 4rem;
+    border-width: 1rem;
+  }
+  .banner-section .slide-button-group .slide-button-next, .banner-section .slide-button-group .slide-button-prev {
+    height: 2rem;
+    width: 2rem;
+  }
+  .banner-section .slide-button-group .slide-button-next i, .banner-section .slide-button-group .slide-button-prev i {
+    font-size: 0.9rem;
+  }
+  .banner-section .inner-banner .content {
+    padding: 3rem 0;
+  }
+  .banner-section .inner-banner .content h1, .banner-section .inner-banner .content h2, .banner-section .inner-banner .content h3 {
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+  }
+  .banner-section .inner-banner .content p {
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+  .banner-section .inner-banner .content .custom-button {
+    margin-top: 0.5rem;
+  }
+  .banner-section .inner-banner .image-area .person-bg {
+    height: 13rem;
+    width: 13rem;
+  }
+  .banner-section .inner-banner .image-area .person-image {
+    max-height: 14rem;
+  }
   .principal-section .inner-principal .principal-image {
     width: 65%;
     height: 22rem;
@@ -3014,8 +3279,185 @@ footer .copyright h5 {
   .principal-section .inner-principal .about-principal p {
     font-size: 0.9rem;
   }
+  .testimonials-section .inner-testimonials .testimonials-area {
+    padding: 3rem 1rem;
+  }
+  .testimonials-section .inner-testimonials .testimonials-area .testimonials-title {
+    margin-bottom: 1rem;
+  }
+  .testimonials-section .inner-testimonials .testimonials-area .testimonials-title h2 {
+    font-size: 2.3rem;
+  }
+  .testimonials-section .inner-testimonials .testimonials-area .testimonial-item .ratings {
+    font-size: 1.1rem;
+  }
+  .testimonials-section .inner-testimonials .testimonials-area .testimonial-item .testimonial-user-profile .user-image {
+    height: 3rem;
+    width: 3rem;
+  }
+  .testimonials-section .inner-testimonials .testimonials-area .testimonial-item .testimonial-user-profile .user-info h3 {
+    font-size: 1rem;
+  }
+  .testimonials-section .inner-testimonials .testimonials-area .testimonial-item .testimonial-user-profile .user-info h6 {
+    font-size: 0.7rem;
+  }
+  .testimonials-section .inner-testimonials .testimonials-area .testimonial-item .testimonial-message {
+    margin: 2rem 0;
+  }
+  .testimonials-section .inner-testimonials .testimonials-area .testimonial-item .testimonial-message .icon {
+    top: -1.2rem;
+    height: 1.2rem;
+    width: 1.2rem;
+  }
+  .testimonials-section .inner-testimonials .testimonials-area .testimonial-item .testimonial-message .icon.rotate-icon {
+    bottom: -1.2rem;
+  }
+  .testimonials-section .inner-testimonials .testimonials-area .testimonial-item .testimonial-message p {
+    font-size: 0.9rem;
+  }
+  .event-section .event-list .event-item .image {
+    height: 14rem;
+  }
+  .event-section .event-list .event-item .content {
+    min-height: 6rem;
+  }
+  footer .footer-inner {
+    grid-template-columns: 1fr;
+  }
+  footer .footer-inner .footer-item .footer-about .logo h1 {
+    font-size: 1.6rem;
+  }
+  footer .footer-inner .footer-item .footer-about .logo p {
+    font-size: 0.9rem;
+  }
+  footer .footer-inner .footer-item .footer-about .short-about-school {
+    margin: 1rem 0;
+  }
+  footer .footer-inner .footer-item .footer-about .short-about-school p {
+    font-size: 0.8rem;
+  }
+  footer .footer-inner .footer-item .footer-about .footer-social-media .social-links li i {
+    height: 1.8rem;
+    width: 1.8rem;
+    font-size: 0.9rem;
+  }
+  footer .footer-inner .footer-item .footer-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+  }
+  footer .footer-inner .footer-item .footer-links li {
+    margin-bottom: 0.6rem;
+    font-size: 0.9rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .custom-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  .principal-section .inner-principal .about-principal h2 {
+    font-size: 2rem;
+  }
+  .principal-section .inner-principal .about-principal h4 {
+    font-size: 1rem;
+  }
+  .principal-section .inner-principal .about-principal p {
+    font-size: 0.8rem;
+  }
+  .about-section .inner-about .content .about-title-area h1 {
+    font-size: 2rem;
+  }
+  .about-section .inner-about .content h2 {
+    font-size: 1rem;
+  }
+  .about-section .inner-about .content h3 {
+    font-size: 0.9rem;
+  }
+  .about-section .inner-about .content p {
+    font-size: 0.8rem;
+  }
+  .about-section .inner-about .content .more-details {
+    margin-bottom: 0.8rem;
+    grid-template-columns: 1fr;
+  }
+  .about-section .inner-about .content .more-details li .icon {
+    height: 2.2rem;
+    width: 2.2rem;
+  }
+  .about-section .inner-about .content .more-details li h4 {
+    font-size: 0.9rem;
+  }
+  .about-section .inner-about .image-area::before {
+    height: 20rem;
+    width: 20rem;
+  }
+  .about-section .inner-about .image-area::after {
+    border: 0.6rem solid #FFFFFF;
+    height: 10rem;
+    width: 10rem;
+  }
+  .about-section .inner-about .image-area .icon {
+    height: 10rem;
+    width: 10rem;
+  }
+  .about-section .inner-about .image-area .about-image {
+    height: 20rem;
+    width: 20rem;
+  }
+  .about-section .inner-about .image-area .trusted-by {
+    height: 6.6rem;
+    width: 6.6rem;
+  }
+  .about-section .inner-about .image-area .trusted-by h5 {
+    font-size: 0.6rem;
+  }
+  .about-section .inner-about .image-area .trusted-by h3 {
+    font-size: 1rem;
+  }
+  .testimonials-section .inner-testimonials .testimonials-area {
+    padding: 2rem 1rem;
+  }
+  .testimonials-section .inner-testimonials .testimonials-area .testimonials-title {
+    margin-bottom: 1rem;
+  }
+  .testimonials-section .inner-testimonials .testimonials-area .testimonials-title h2 {
+    font-size: 2rem;
+  }
+  .testimonials-section .inner-testimonials .testimonials-area .testimonial-item .ratings {
+    font-size: 1.1rem;
+  }
+  .testimonials-section .inner-testimonials .testimonials-area .testimonial-item .testimonial-message p {
+    font-size: 0.8rem;
+  }
 }
 @media only screen and (max-width: 440px) {
+  .section-title {
+    padding: 3rem 0;
+    margin-bottom: 3rem;
+  }
+  .section-title h2 {
+    font-size: 1.7rem;
+  }
+  .banner-section .slide-button-group {
+    bottom: 0.5rem;
+  }
+  .banner-section .inner-banner .content {
+    padding: 3.5rem 0;
+  }
+  .banner-section .inner-banner .content h1, .banner-section .inner-banner .content h2, .banner-section .inner-banner .content h3 {
+    font-size: 2rem;
+  }
+  .banner-section .inner-banner .content p {
+    font-size: 1rem;
+    line-height: 110%;
+  }
+  .banner-section .inner-banner .image-area .person-bg {
+    height: 10rem;
+    width: 10rem;
+  }
+  .banner-section .inner-banner .image-area .person-image {
+    max-height: 12rem;
+  }
   .principal-section .inner-principal .principal-image {
     width: 85%;
   }

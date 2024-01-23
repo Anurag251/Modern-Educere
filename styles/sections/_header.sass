@@ -196,7 +196,7 @@ header
   .side-nav-inner
     position: relative
     height: 100%
-    width: 13rem
+    width: 19rem
     left: -15rem
     background-color: $light
     @include flex($justify: center)
@@ -227,14 +227,23 @@ header
         background: #a00000
         color: $light
 
-    .logo
+    .nav-logo-sec
       width: 100%
-      overflow: hidden
+
+    .logo
+      color: $pri
+      padding: 0 .5rem
+
+      h1
+        font-size: 1.4rem
+        line-height: 130%
+
+      p
+        font-size: .8rem
 
       .logo-image
         @include image()
         object-fit: contain
-        border-radius: .4rem
 
     nav
       @include flex($justify: flex-start)
@@ -244,6 +253,7 @@ header
       .nav-links
         @include flex($justify: flex-start)
         flex-direction: column
+        align-items: flex-start
         width: 100%
 
         .link
@@ -277,6 +287,22 @@ header
             text-align: left
             border-radius: .4rem
             padding-left: 3rem
+
+    .contact-info
+      margin-top: 3rem
+      @include flex($justify: flex-start)
+      align-items: flex-start
+      flex-direction: column
+      width: 100%
+
+      button
+        color: $dark
+        margin-bottom: .5rem
+        font-size: 1rem
+        cursor: pointer
+
+        i
+          margin-right: .2rem
 
     .social-links
       position: absolute

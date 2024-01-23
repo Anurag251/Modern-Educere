@@ -4,7 +4,7 @@
 
 .banner-section
   position: relative
-  background-color: $sec
+  background-color: $pri
   padding: 0
   overflow: hidden
 
@@ -80,7 +80,7 @@
 
   .slide-button-group
     position: absolute
-    top: 50%
+    bottom: 1rem
     left: 0
     width: 100%
     @include flex($justify: space-between)
@@ -98,6 +98,10 @@
         background-color: $light
         color: $pri
         font-size: 1.5rem
+
+      &.swiper-button-disabled
+        opacity: .5
+        pointer-events: none
 
   .swiper-slide, .swiper-wrapper
     height: 100%
@@ -186,10 +190,12 @@
         transform: scale(1.4)
         @include trans()
         transition-delay: .7s
+        background-color: $light
+        color: $pri
 
         &:hover
-          background-color: $light
-          color: $dark
+          background-color: $sec
+          color: $light
 
     .image-area
       position: relative
@@ -214,7 +220,8 @@
         filter: blur(4px)
 
       .person-image
-        height: 40rem
+        max-height: 40rem
+        height: 100%
         width: 100%
         object-fit: contain
         object-position: bottom
