@@ -15,11 +15,11 @@
 }
 
 :root {
-  --pri: #55a960;
+  --pri: #00BF63;
   --sec: #022c46;
-  --prirgb: #55a960;
+  --prirgb: #00BF63;
   --secrgb: #022c46;
-  --swiper-theme-color: #009248;
+  --swiper-theme-color: #00BF63;
 }
 
 body {
@@ -210,6 +210,7 @@ p {
   z-index: 2;
   text-align: center;
   width: 100%;
+  padding: 0 0.5rem;
 }
 .page-title-section .page-title h5 {
   font-size: 1.4rem;
@@ -226,6 +227,26 @@ p {
   font-size: 5.5rem;
   line-height: 3.8rem;
   text-transform: uppercase;
+}
+
+.admission-open-button {
+  position: fixed;
+  bottom: 6rem;
+  right: -4rem;
+  transform: rotate(-90deg);
+  z-index: 1000;
+}
+.admission-open-button button {
+  padding: 0.5rem 1rem;
+  color: #FFFFFF;
+  background-color: var(--pri);
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 0 10px rgba(31, 31, 31, 0.3);
+  border-radius: 0.4rem;
+}
+.admission-open-button button:hover {
+  background-color: var(--sec);
 }
 
 header {
@@ -550,7 +571,7 @@ header .inner-header .search-button {
   padding-left: 3rem;
 }
 .side-nav .side-nav-inner .contact-info {
-  margin-top: 3rem;
+  margin-top: 1.5rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -1380,12 +1401,13 @@ header .inner-header .search-button {
 .testimonials-section .inner-testimonials .testimonials-area .swiper .swiper-pagination .swiper-pagination-bullet {
   height: 7px;
   width: 1rem;
-  background-color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  background-color: rgba(var(--prirgb), 0.8);
   border-radius: 1rem;
   opacity: 1;
 }
 .testimonials-section .inner-testimonials .testimonials-area .swiper .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background-color: rgba(var(--prirgb), 0.8);
+  background-color: #FFFFFF;
 }
 .testimonials-section .inner-testimonials .testimonials-area .swiper .slide-button-group {
   position: absolute;
@@ -1400,7 +1422,7 @@ header .inner-header .search-button {
 .testimonials-section .inner-testimonials .testimonials-area .swiper .slide-button-group .slide-button-next, .testimonials-section .inner-testimonials .testimonials-area .swiper .slide-button-group .slide-button-prev {
   height: 2rem;
   width: 2rem;
-  border: 2px solid rgba(var(--prirgb), 0.8);
+  border: 2px solid rgba(255, 255, 255, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1408,7 +1430,7 @@ header .inner-header .search-button {
   cursor: pointer;
   background-color: var(--sec);
   transition: all 0.4s cubic-bezier(0, 1, 0, 1);
-  color: rgba(var(--prirgb), 0.8);
+  color: rgba(255, 255, 255, 0.8);
 }
 .testimonials-section .inner-testimonials .testimonials-area .swiper .slide-button-group .slide-button-next:hover, .testimonials-section .inner-testimonials .testimonials-area .swiper .slide-button-group .slide-button-prev:hover {
   transform: scale(1.1);
@@ -1460,8 +1482,8 @@ header .inner-header .search-button {
   position: absolute;
   left: 0;
   top: -1.5rem;
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 2.5rem;
+  width: 2.5rem;
 }
 .testimonials-section .inner-testimonials .testimonials-area .testimonial-item .testimonial-message .icon.rotate-icon {
   top: auto;
@@ -1470,13 +1492,12 @@ header .inner-header .search-button {
   bottom: -1.5rem;
   transform: rotate(180deg);
 }
-.testimonials-section .inner-testimonials .testimonials-area .testimonial-item .testimonial-message .icon img {
+.testimonials-section .inner-testimonials .testimonials-area .testimonial-item .testimonial-message .icon svg {
   height: 100%;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-fit: contain;
-     object-fit: contain;
+}
+.testimonials-section .inner-testimonials .testimonials-area .testimonial-item .testimonial-message .icon svg path {
+  fill: var(--pri);
 }
 .testimonials-section .inner-testimonials .testimonials-area .testimonial-item .testimonial-message p {
   font-size: 1.1rem;
@@ -1691,7 +1712,7 @@ footer .footer-inner .footer-item .footer-about {
 footer .footer-inner .footer-item .footer-about .logo {
   height: 100%;
   width: 14rem;
-  color: var(--pri);
+  color: #FFFFFF;
 }
 footer .footer-inner .footer-item .footer-about .logo h1 {
   font-size: 1.6rem;
@@ -1754,14 +1775,14 @@ footer .footer-inner .footer-item .footer-links li a {
   color: #FFFFFF;
 }
 footer .footer-inner .footer-item .footer-links li a:hover {
-  color: rgba(var(--prirgb), 0.9);
+  text-decoration: underline;
 }
 footer .copyright {
   position: relative;
   z-index: 2;
   margin-top: 3rem;
   padding: 2rem 0;
-  border-top: 1.5px dashed var(--pri);
+  border-top: 1px dashed #FFFFFF;
 }
 footer .copyright h5 {
   text-align: center;
@@ -2248,6 +2269,7 @@ footer .copyright h5 {
   justify-content: flex-start;
   align-items: center;
   gap: 1.5rem;
+  flex-wrap: wrap;
 }
 .event-details-section .inner-event-details .event-details .content .posted-info .post-item {
   display: flex;
@@ -2385,7 +2407,7 @@ footer .copyright h5 {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  grid-gap: 1rem;
+  gap: 1rem;
   border-bottom: 1px solid rgba(31, 31, 31, 0.3);
 }
 .event-details-section .inner-event-details .event-details-other .latest-events .event-list .item:hover .content h3 {
@@ -3415,8 +3437,8 @@ footer .copyright h5 {
   }
   .testimonials-section .inner-testimonials .testimonials-area .testimonial-item .testimonial-message .icon {
     top: -1.2rem;
-    height: 1.2rem;
-    width: 1.2rem;
+    height: 1.6rem;
+    width: 1.6rem;
   }
   .testimonials-section .inner-testimonials .testimonials-area .testimonial-item .testimonial-message .icon.rotate-icon {
     bottom: -1.2rem;
@@ -3696,6 +3718,87 @@ footer .copyright h5 {
     margin-top: 0.7rem;
     line-height: 120%;
   }
+  .event-details-section .inner-event-details .event-details .content .posted-info {
+    margin: 0.5rem 0;
+    gap: 1rem;
+  }
+  .event-details-section .inner-event-details .event-details .content .posted-info .post-item {
+    font-size: 0.75rem;
+  }
+  .event-details-section .inner-event-details .event-details .content .posted-info .post-item i {
+    font-size: 0.9rem;
+  }
+  .event-details-section .inner-event-details .event-details .content .event-title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .event-details-section .inner-event-details .event-details .content h1 {
+    font-size: 2.2rem;
+    margin: 1rem 0 0.5rem;
+  }
+  .event-details-section .inner-event-details .event-details .content h2 {
+    font-size: 1.8rem;
+    margin: 1rem 0 0.5rem;
+  }
+  .event-details-section .inner-event-details .event-details .content h3 {
+    font-size: 1.6rem;
+    margin: 0.7rem 0 0.2rem;
+  }
+  .event-details-section .inner-event-details .event-details .content h4 {
+    font-size: 1.2rem;
+  }
+  .event-details-section .inner-event-details .event-details .content h5 {
+    font-size: 0.9rem;
+  }
+  .event-details-section .inner-event-details .event-details .content h6 {
+    font-size: 0.7rem;
+  }
+  .event-details-section .inner-event-details .event-details .content p {
+    font-size: 0.9rem;
+    margin-bottom: 0.7rem;
+  }
+  .event-details-section .inner-event-details .event-details .content ul {
+    padding: 1rem;
+    border-radius: 0.6rem;
+  }
+  .event-details-section .inner-event-details .event-details .content ul li {
+    margin-bottom: 1rem;
+    padding-left: 1.2rem;
+    font-size: 0.85rem;
+  }
+  .event-details-section .inner-event-details .event-details .content ul li::before {
+    left: 0.3rem;
+    top: 0.15rem;
+    height: 1.1rem;
+    width: 1.1rem;
+    font-size: 0.8rem;
+    margin-left: -1em;
+    margin-right: 0.3rem;
+  }
+  .event-details-section .inner-event-details .event-details .content ol {
+    padding: 1rem;
+    border-radius: 0.6rem;
+    padding-left: 2rem;
+  }
+  .event-details-section .inner-event-details .event-details .content ol li {
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+  }
+  .event-details-section .inner-event-details .event-details .content img {
+    margin: 0.5rem 0;
+  }
+  .event-details-section .inner-event-details .event-details .content blockquote {
+    padding: 1rem;
+    border-radius: 0.6rem;
+    font-size: 1.1rem;
+    padding-left: 3rem;
+    margin: 0.5rem 0;
+  }
+  .event-details-section .inner-event-details .event-details .content blockquote::after {
+    top: 0.2rem;
+    font-size: 3rem;
+    line-height: 5rem;
+  }
 }
 @media only screen and (max-width: 500px) {
   .custom-button {
@@ -3785,7 +3888,7 @@ footer .copyright h5 {
 }
 @media only screen and (max-width: 440px) {
   .page-title-section {
-    height: 14rem;
+    height: 12rem;
   }
   .page-title-section .page-title h5 {
     font-size: 0.9rem;
@@ -3800,6 +3903,15 @@ footer .copyright h5 {
   }
   .section-title h2 {
     font-size: 1.7rem;
+  }
+  .admission-open-button {
+    bottom: 6rem;
+    right: -3.2rem;
+  }
+  .admission-open-button button {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.8rem;
+    border-radius: 0.3rem;
   }
   .banner-section .slide-button-group {
     bottom: 0.5rem;
@@ -3823,6 +3935,64 @@ footer .copyright h5 {
   }
   .principal-section .inner-principal .principal-image {
     width: 85%;
+  }
+  .principal-section .inner-principal .about-principal h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.1rem;
+  }
+  .principal-section .inner-principal .about-principal h4 {
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+  }
+  .principal-section .inner-principal .about-principal p {
+    font-size: 0.8rem;
+  }
+  .about-section .inner-about .content .about-title-area h1 {
+    font-size: 1.8rem;
+  }
+  .about-section .inner-about .content h2 {
+    font-size: 1.1rem;
+  }
+  .about-section .inner-about .content h3 {
+    font-size: 1rem;
+  }
+  .about-section .inner-about .content p {
+    font-size: 0.8rem;
+  }
+  .testimonials-section .inner-testimonials .testimonials-area .swiper .slide-button-group {
+    top: auto;
+    right: 0.5rem;
+    bottom: 0.5rem;
+  }
+  .testimonials-section .inner-testimonials .testimonials-area .swiper .slide-button-group .slide-button-next, .testimonials-section .inner-testimonials .testimonials-area .swiper .slide-button-group .slide-button-prev {
+    height: 1.8rem;
+    width: 1.8rem;
+    font-size: 0.9rem;
+  }
+  .testimonials-section .inner-testimonials .testimonials-area .testimonials-title {
+    margin-bottom: 0.5rem;
+  }
+  .testimonials-section .inner-testimonials .testimonials-area .testimonials-title h2 {
+    font-size: 1.8rem;
+  }
+  .testimonials-section .inner-testimonials .testimonials-area .testimonial-item .ratings {
+    font-size: 1rem;
+  }
+  .testimonials-section .inner-testimonials .testimonials-area .testimonial-item .testimonial-user-profile .user-image {
+    height: 3rem;
+    width: 3rem;
+  }
+  .testimonials-section .inner-testimonials .testimonials-area .testimonial-item .testimonial-user-profile .user-info h3 {
+    font-size: 1rem;
+  }
+  .testimonials-section .inner-testimonials .testimonials-area .testimonial-item .testimonial-user-profile .user-info h6 {
+    font-size: 0.7rem;
+  }
+  .testimonials-section .inner-testimonials .testimonials-area .testimonial-item .testimonial-message {
+    margin: 1rem 0;
+  }
+  .testimonials-section .inner-testimonials .testimonials-area .testimonial-item .testimonial-message p {
+    font-size: 0.8rem;
   }
   .gallery-section .gallery .list {
     --n: 10 /* number of rows*/;
@@ -3961,7 +4131,7 @@ footer .copyright h5 {
   .event-section .event-list .event-item .content {
     padding: 0.9rem;
     padding-left: 2.7rem;
-    min-height: 7rem;
+    min-height: 6rem;
   }
   .event-section .event-list .event-item .content .date {
     width: 1.8rem;
@@ -3980,8 +4150,93 @@ footer .copyright h5 {
     font-size: 0.8rem;
   }
   .event-section .event-list .event-item .content h3 {
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin-top: 1rem;
+  }
+  .event-details-section .inner-event-details .event-details .content .posted-info {
+    gap: 0.8rem;
+  }
+  .event-details-section .inner-event-details .event-details .content .posted-info .post-item {
+    font-size: 0.7rem;
+  }
+  .event-details-section .inner-event-details .event-details .content .posted-info .post-item i {
+    font-size: 0.8rem;
+  }
+  .event-details-section .inner-event-details .event-details .content .event-title {
+    font-size: 1.7rem;
+  }
+  .event-details-section .inner-event-details .event-details .content h1 {
+    font-size: 2rem;
+    margin: 0.7rem 0 0.3rem;
+  }
+  .event-details-section .inner-event-details .event-details .content h2 {
+    font-size: 1.6rem;
+    margin: 0.7rem 0 0.5rem;
+  }
+  .event-details-section .inner-event-details .event-details .content h3 {
+    font-size: 1.4rem;
+    margin: 0.5rem 0 0.2rem;
+  }
+  .event-details-section .inner-event-details .event-details .content h4 {
+    font-size: 1rem;
+  }
+  .event-details-section .inner-event-details .event-details .content h5 {
+    font-size: 0.8rem;
+  }
+  .event-details-section .inner-event-details .event-details .content h6 {
+    font-size: 0.7rem;
+  }
+  .event-details-section .inner-event-details .event-details .content p {
+    font-size: 0.8rem;
+    margin-bottom: 0.6rem;
+  }
+  .event-details-section .inner-event-details .event-details .content ul li {
+    padding-left: 1.2rem;
+    font-size: 0.75rem;
+  }
+  .event-details-section .inner-event-details .event-details .content ul li::before {
+    left: 0.5rem;
+  }
+  .event-details-section .inner-event-details .event-details .content ol li {
+    font-size: 0.75rem;
+  }
+  .event-details-section .inner-event-details .event-details .content img {
+    margin: 0.5rem 0;
+  }
+  .event-details-section .inner-event-details .event-details .content blockquote {
+    padding: 0.7rem;
+    font-size: 0.9rem;
+    padding-left: 2.3rem;
+    margin: 0.5rem 0;
+  }
+  .event-details-section .inner-event-details .event-details .content blockquote::after {
+    top: 1rem;
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+  .event-details-section .inner-event-details .event-details-other .latest-events h2 {
+    padding: 0.8rem 0.6rem;
+    font-size: 1.1rem;
+  }
+  .event-details-section .inner-event-details .event-details-other .latest-events .event-list .item {
+    padding: 0.6rem;
+    gap: 0.6rem;
+  }
+  .event-details-section .inner-event-details .event-details-other .latest-events .event-list .item .image {
+    height: 4rem;
+    width: 4rem;
+    flex: 4rem;
+  }
+  .event-details-section .inner-event-details .event-details-other .latest-events .event-list .item .content {
+    max-width: calc(100% - 5.5rem);
+    flex: calc(100% - 5.5rem);
+  }
+  .event-details-section .inner-event-details .event-details-other .latest-events .event-list .item .content h3 {
+    font-size: 0.8rem;
+  }
+  .event-details-section .inner-event-details .event-details-other .latest-events .event-list .item .content .date {
+    font-size: 0.68rem;
+    gap: 0.3rem;
   }
 }
 @media only screen and (max-width: 380px) {

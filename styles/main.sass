@@ -19,11 +19,11 @@
   scroll-behavior: smooth !important
 
 :root
-  --pri: #55a960
+  --pri: #00BF63
   --sec: #022c46
-  --prirgb: #55a960
+  --prirgb: #00BF63
   --secrgb: #022c46
-  --swiper-theme-color: #009248
+  --swiper-theme-color: #00BF63
 
 body
   scroll-behavior: smooth !important
@@ -201,6 +201,7 @@ p
     z-index: 2
     text-align: center
     width: 100%
+    padding: 0 .5rem
 
     h5
       font-size: 1.4rem
@@ -216,6 +217,25 @@ p
       font-size: 5.5rem
       line-height: 3.8rem
       text-transform: uppercase
+
+.admission-open-button
+  position: fixed
+  bottom: 6rem
+  right: -4rem
+  transform: rotate(-90deg)
+  z-index: 1000
+
+  button
+    padding: .5rem 1rem
+    color: $light
+    background-color: $pri
+    cursor: pointer
+    font-size: 1rem
+    box-shadow: 0 0 10px rgba($dark, .3)
+    border-radius: .4rem
+
+    &:hover
+      background-color: $sec
 
 div
 

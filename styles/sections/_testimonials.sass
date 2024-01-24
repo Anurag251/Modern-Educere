@@ -112,12 +112,13 @@
           .swiper-pagination-bullet
             height: 7px
             width: 1rem
-            background-color: $light
+            border: 1px solid $light
+            background-color: rgba(var(--prirgb), .8)
             border-radius: 1rem
             opacity: 1
 
             &.swiper-pagination-bullet-active
-              background-color: rgba(var(--prirgb), .8)
+              background-color: $light
 
         .slide-button-group
           position: absolute
@@ -130,13 +131,13 @@
           .slide-button-next, .slide-button-prev
             height: 2rem
             width: 2rem
-            border: 2px solid rgba(var(--prirgb), .8)
+            border: 2px solid rgba($light, .8)
             @include flex($justify: center)
             border-radius: 50%
             cursor: pointer
             background-color: $sec
             @include fastTrans()
-            color: rgba(var(--prirgb), .8)
+            color: rgba($light, .8)
 
             &:hover
               transform: scale(1.1)
@@ -184,8 +185,8 @@
             position: absolute
             left: 0
             top: -1.5rem
-            height: 1.5rem
-            width: 1.5rem
+            height: 2.5rem
+            width: 2.5rem
 
             &.rotate-icon
               top: auto
@@ -194,9 +195,12 @@
               bottom: -1.5rem
               transform: rotate(180deg)
 
-            img
-              @include image()
-              object-fit: contain
+            svg
+              height: 100%
+              width: 100%
+
+              path
+                fill: $pri
 
           p
             font-size: 1.1rem

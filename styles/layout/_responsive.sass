@@ -501,8 +501,8 @@
 
             .icon
               top: -1.2rem
-              height: 1.2rem
-              width: 1.2rem
+              height: 1.6rem
+              width: 1.6rem
 
               &.rotate-icon
                 bottom: -1.2rem
@@ -823,6 +823,91 @@
             margin-top: .7rem
             line-height: 120%
 
+  .event-details-section
+    .inner-event-details
+      .event-details
+        .content
+          .posted-info
+            margin: .5rem 0
+            gap: 1rem
+
+            .post-item
+              font-size: .75rem
+
+              i
+                font-size: .9rem
+
+          .event-title
+            font-size: 2rem
+            margin-bottom: .5rem
+
+          h1
+            font-size: 2.2rem
+            margin: 1rem 0 .5rem
+
+          h2
+            font-size: 1.8rem
+            margin: 1rem 0 .5rem
+
+          h3
+            font-size: 1.6rem
+            margin: .7rem 0 .2rem
+
+          h4
+            font-size: 1.2rem
+
+          h5
+            font-size: .9rem
+
+          h6
+            font-size: .7rem
+
+          p
+            font-size: .9rem
+            margin-bottom: .7rem
+
+          ul
+            padding: 1rem
+            border-radius: .6rem
+
+            li
+              margin-bottom: 1rem
+              padding-left: 1.2rem
+              font-size: .85rem
+
+              &::before
+                left: .3rem
+                top: .15rem
+                height: 1.1rem
+                width: 1.1rem
+                font-size: .8rem
+                margin-left: -1em
+                margin-right: 0.3rem
+
+          ol
+            padding: 1rem
+            border-radius: .6rem
+            padding-left: 2rem
+
+            li
+              margin-bottom: 1rem
+              font-size: .85rem
+
+          img
+            margin: .5rem 0
+
+          blockquote
+            padding: 1rem
+            border-radius: .6rem
+            font-size: 1.1rem
+            padding-left: 3rem
+            margin: .5rem 0
+
+            &::after
+              top: .2rem
+              font-size: 3rem
+              line-height: 5rem
+
 @media only screen and ( max-width:  500px)
   .custom-button
     padding: .5rem 1rem
@@ -924,7 +1009,7 @@
 
 @media only screen and ( max-width:  440px)
   .page-title-section
-    height: 14rem
+    height: 12rem
 
     .page-title
       h5
@@ -940,6 +1025,15 @@
 
     h2
       font-size: 1.7rem
+
+  .admission-open-button
+    bottom: 6rem
+    right: -3.2rem
+
+    button
+      padding: .4rem .6rem
+      font-size: .8rem
+      border-radius: .3rem
 
   .banner-section
     .slide-button-group
@@ -968,6 +1062,76 @@
     .inner-principal
       .principal-image
         width: 85%
+
+      .about-principal
+        h2
+          font-size: 1.8rem
+          margin-bottom: .1rem
+
+        h4
+          font-size: .9rem
+          margin-bottom: .3rem
+
+        p
+          font-size: .8rem
+
+  .about-section
+    .inner-about
+      .content
+        .about-title-area
+          h1
+            font-size: 1.8rem
+
+        h2
+          font-size: 1.1rem
+
+        h3
+          font-size: 1rem
+
+        p
+          font-size: .8rem
+
+  .testimonials-section
+    .inner-testimonials
+      .testimonials-area
+        .swiper
+          .slide-button-group
+            top: auto
+            right: .5rem
+            bottom: .5rem
+
+            .slide-button-next, .slide-button-prev
+              height: 1.8rem
+              width: 1.8rem
+              font-size: .9rem
+
+        .testimonials-title
+          margin-bottom: .5rem
+
+          h2
+            font-size: 1.8rem
+
+        .testimonial-item
+          .ratings
+            font-size: 1rem
+
+          .testimonial-user-profile
+            .user-image
+              height: 3rem
+              width: 3rem
+
+            .user-info
+              h3
+                font-size: 1rem
+
+              h6
+                font-size: .7rem
+
+          .testimonial-message
+            margin: 1rem 0
+
+            p
+              font-size: .8rem
 
   .gallery-section
     .gallery
@@ -1131,7 +1295,7 @@
         .content
           padding: .9rem
           padding-left: 2.7rem
-          min-height: 7rem
+          min-height: 6rem
 
           .date
             width: 1.8rem
@@ -1150,8 +1314,101 @@
                 font-size: .8rem
 
           h3
-            font-size: 1rem
+            font-size: .9rem
             margin-top: 1rem
+
+  .event-details-section
+    .inner-event-details
+      .event-details
+        .content
+          .posted-info
+            gap: .8rem
+
+            .post-item
+              font-size: .7rem
+
+              i
+                font-size: .8rem
+
+          .event-title
+            font-size: 1.7rem
+
+          h1
+            font-size: 2rem
+            margin: .7rem 0 .3rem
+
+          h2
+            font-size: 1.6rem
+            margin: .7rem 0 .5rem
+
+          h3
+            font-size: 1.4rem
+            margin: .5rem 0 .2rem
+
+          h4
+            font-size: 1rem
+
+          h5
+            font-size: .8rem
+
+          h6
+            font-size: .7rem
+
+          p
+            font-size: .8rem
+            margin-bottom: .6rem
+
+          ul
+            li
+              padding-left: 1.2rem
+              font-size: .75rem
+
+              &::before
+                left: .5rem
+
+          ol
+            li
+              font-size: .75rem
+
+          img
+            margin: .5rem 0
+
+          blockquote
+            padding: .7rem
+            font-size: .9rem
+            padding-left: 2.3rem
+            margin: .5rem 0
+
+            &::after
+              top: 1rem
+              font-size: 2rem
+              line-height: 2rem
+
+      .event-details-other
+        .latest-events
+          h2
+            padding: .8rem .6rem
+            font-size: 1.1rem
+          .event-list
+            .item
+              padding: .6rem
+              gap: .6rem
+
+              .image
+                height: 4rem
+                width: 4rem
+                flex: 4rem
+
+              .content
+                max-width: calc( 100% - 5.5rem )
+                flex: calc( 100% - 5.5rem )
+
+                h3
+                  font-size: .8rem
+
+                .date
+                  font-size: .68rem
+                  gap: .3rem
 
 @media only screen and ( max-width:  380px)
   .principal-section

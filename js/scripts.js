@@ -60,6 +60,7 @@ const priRGB = hexToRgb(priColor);
 const secRGB = hexToRgb(secColor);
 
 document.documentElement.style.setProperty("--pri", priColor);
+document.documentElement.style.setProperty("--swiper-theme-color", priColor);
 document.documentElement.style.setProperty("--sec", secColor);
 document.documentElement.style.setProperty("--prirgb", priRGB);
 document.documentElement.style.setProperty("--secrgb", secRGB);
@@ -129,24 +130,26 @@ const uploadPersoalImageInput = document.querySelector(
 
 const uploadPersoalImage = document.querySelector("#UploadPhoto img");
 
-uploadPersoalImageButton.addEventListener("click", () => {
-  uploadPersoalImageInput.click();
-});
+if (uploadPersoalImageButton) {
+  uploadPersoalImageButton.addEventListener("click", () => {
+    uploadPersoalImageInput.click();
+  });
 
-uploadPersoalImageInput.addEventListener("change", function () {
-  uploadPersoalImageButton.classList.add("active");
-  const selectedFile = uploadPersoalImageInput.files[0];
+  uploadPersoalImageInput.addEventListener("change", function () {
+    uploadPersoalImageButton.classList.add("active");
+    const selectedFile = uploadPersoalImageInput.files[0];
 
-  if (selectedFile) {
-    const reader = new FileReader();
+    if (selectedFile) {
+      const reader = new FileReader();
 
-    reader.onload = function (e) {
-      uploadPersoalImage.src = e.target.result;
-    };
+      reader.onload = function (e) {
+        uploadPersoalImage.src = e.target.result;
+      };
 
-    reader.readAsDataURL(selectedFile);
-  } else {
-    // Clear the image preview if no file is selected
-    uploadPersoalImage.src = "";
-  }
-});
+      reader.readAsDataURL(selectedFile);
+    } else {
+      // Clear the image preview if no file is selected
+      uploadPersoalImage.src = "";
+    }
+  });
+}
