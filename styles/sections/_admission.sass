@@ -70,6 +70,9 @@
     @include flex($justify: flex-start)
     gap: 1rem
 
+    &#schoolVehicleChoosed
+      display: none
+
     &.twoLine
       flex-direction: column
       align-items: flex-start
@@ -126,6 +129,12 @@
               transform: translate(-50%, -50%)
               display: none
               font-size: 1.4rem
+
+  .custom-map
+    height: 20rem
+    width: 100%
+    margin: 1rem 0 2rem
+    border-radius: .4rem
 
   .group
     height: 3rem
@@ -305,6 +314,12 @@
       border-radius: .3rem
       padding: .5rem 1rem
       text-align: left
+      resize: vertical
+
+      &.input-map
+        cursor: not-allowed
+        &::placeholder
+          color: rgba($dark, .6)
 
       &::placeholder
         color: transparent

@@ -153,3 +153,26 @@ if (uploadPersoalImageButton) {
     }
   });
 }
+
+const schoolVehicle = document.querySelector("#schoolVehicle");
+if (schoolVehicle) {
+  const schoolVehicleChoosed = document.querySelector("#schoolVehicleChoosed");
+  const schoolVehicleYes = schoolVehicle.querySelector(
+    "#schoolVehicleYesButton"
+  );
+  const schoolVehicleNo = schoolVehicle.querySelector("#schoolVehicleNoButton");
+
+  schoolVehicleYes.addEventListener("click", () => {
+    schoolVehicleChoosed.style.display = "flex";
+  });
+
+  schoolVehicleNo.addEventListener("click", () => {
+    schoolVehicleChoosed.style.display = "none";
+
+    const radioInputs = document.getElementsByName("schoolVehicleYes");
+
+    for (var i = 0; i < radioInputs.length; i++) {
+      radioInputs[i].checked = false;
+    }
+  });
+}

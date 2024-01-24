@@ -366,6 +366,21 @@
             .item
               border-bottom: 1px solid rgba($dark, .3)
 
+  .admission-section
+    .form-inputs
+      .input-group
+        &.threeItem
+          grid-template-columns: 1fr 1fr
+          grid-row-gap: 0
+
+          .group
+            &:nth-child(1)
+              grid-column: span 2
+
+        &.twoItem
+          grid-template-columns: 1fr
+          grid-row-gap: 0
+
 @media only screen and ( max-width:  700px)
 
 @media only screen and ( max-width:  650px)
@@ -907,6 +922,69 @@
               top: .2rem
               font-size: 3rem
               line-height: 5rem
+
+  .admission-section
+    .title-part
+      .name
+        font-size: 1.4rem
+        margin-bottom: 0
+
+    .admission-form-area
+      padding: 1rem
+
+    .form-subtitle
+      font-size: .9rem
+      margin-bottom: 1rem
+
+    .form-inputs
+      .form-title
+        margin-bottom: .8rem
+        font-size: 1rem
+
+      .input-group-title
+        font-size: .9rem
+        margin-bottom: .7rem
+
+      .input-group
+        &.threeItem
+          grid-template-columns: 1fr
+
+          .group
+            &:nth-child(1)
+              grid-column: span 1
+
+    .custom-select
+      margin-bottom: 2rem
+      gap: .7rem
+
+      h4
+        font-size: 1rem
+
+      ul
+        gap: .7rem
+
+        li
+          font-size: .9rem
+          .button
+            gap: .5rem
+            padding: .3rem .5rem
+
+            .box
+              height: .9rem
+              width: .9rem
+
+              i
+                font-size: 1.2rem
+
+    .group
+      height: 2.8rem
+      margin-bottom: 1.3rem
+
+      label
+        font-size: .8rem
+
+      .custom-input
+        font-size: .9rem
 
 @media only screen and ( max-width:  500px)
   .custom-button

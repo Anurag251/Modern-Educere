@@ -2701,6 +2701,9 @@ footer .copyright h5 {
   align-items: center;
   gap: 1rem;
 }
+.admission-section .custom-select#schoolVehicleChoosed {
+  display: none;
+}
 .admission-section .custom-select.twoLine {
   flex-direction: column;
   align-items: flex-start;
@@ -2757,6 +2760,12 @@ footer .copyright h5 {
   transform: translate(-50%, -50%);
   display: none;
   font-size: 1.4rem;
+}
+.admission-section .custom-map {
+  height: 20rem;
+  width: 100%;
+  margin: 1rem 0 2rem;
+  border-radius: 0.4rem;
 }
 .admission-section .group {
   height: 3rem;
@@ -2949,6 +2958,16 @@ footer .copyright h5 {
   border-radius: 0.3rem;
   padding: 0.5rem 1rem;
   text-align: left;
+  resize: vertical;
+}
+.admission-section .group .custom-input.input-map {
+  cursor: not-allowed;
+}
+.admission-section .group .custom-input.input-map::-moz-placeholder {
+  color: rgba(31, 31, 31, 0.6);
+}
+.admission-section .group .custom-input.input-map::placeholder {
+  color: rgba(31, 31, 31, 0.6);
 }
 .admission-section .group .custom-input::-moz-placeholder {
   color: transparent;
@@ -3317,6 +3336,17 @@ footer .copyright h5 {
   }
   .event-details-section .inner-event-details .event-details-other .latest-events .event-list .item {
     border-bottom: 1px solid rgba(31, 31, 31, 0.3);
+  }
+  .admission-section .form-inputs .input-group.threeItem {
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 0;
+  }
+  .admission-section .form-inputs .input-group.threeItem .group:nth-child(1) {
+    grid-column: span 2;
+  }
+  .admission-section .form-inputs .input-group.twoItem {
+    grid-template-columns: 1fr;
+    grid-row-gap: 0;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -3800,6 +3830,65 @@ footer .copyright h5 {
     top: 0.2rem;
     font-size: 3rem;
     line-height: 5rem;
+  }
+  .admission-section .title-part .name {
+    font-size: 1.4rem;
+    margin-bottom: 0;
+  }
+  .admission-section .admission-form-area {
+    padding: 1rem;
+  }
+  .admission-section .form-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  .admission-section .form-inputs .form-title {
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+  }
+  .admission-section .form-inputs .input-group-title {
+    font-size: 0.9rem;
+    margin-bottom: 0.7rem;
+  }
+  .admission-section .form-inputs .input-group.threeItem {
+    grid-template-columns: 1fr;
+  }
+  .admission-section .form-inputs .input-group.threeItem .group:nth-child(1) {
+    grid-column: span 1;
+  }
+  .admission-section .custom-select {
+    margin-bottom: 2rem;
+    gap: 0.7rem;
+  }
+  .admission-section .custom-select h4 {
+    font-size: 1rem;
+  }
+  .admission-section .custom-select ul {
+    gap: 0.7rem;
+  }
+  .admission-section .custom-select ul li {
+    font-size: 0.9rem;
+  }
+  .admission-section .custom-select ul li .button {
+    gap: 0.5rem;
+    padding: 0.3rem 0.5rem;
+  }
+  .admission-section .custom-select ul li .button .box {
+    height: 0.9rem;
+    width: 0.9rem;
+  }
+  .admission-section .custom-select ul li .button .box i {
+    font-size: 1.2rem;
+  }
+  .admission-section .group {
+    height: 2.8rem;
+    margin-bottom: 1.3rem;
+  }
+  .admission-section .group label {
+    font-size: 0.8rem;
+  }
+  .admission-section .group .custom-input {
+    font-size: 0.9rem;
   }
 }
 @media only screen and (max-width: 500px) {
