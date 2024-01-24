@@ -186,16 +186,19 @@ p {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center -5rem;
+  background-color: var(--sec);
 }
-.page-title-section::after {
-  content: "";
+.page-title-section .page-title-section-image {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(var(--secrgb), 0.5);
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.08;
   z-index: 1;
 }
 .page-title-section .page-title {
@@ -405,7 +408,9 @@ header .inner-header .search-button {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  align-items: flex-start;
   pointer-events: none;
+  overflow: auto;
 }
 .side-nav.active {
   pointer-events: all;
@@ -484,11 +489,11 @@ header .inner-header .search-button {
   padding: 0 0.5rem;
 }
 .side-nav .side-nav-inner .logo h1 {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   line-height: 130%;
 }
 .side-nav .side-nav-inner .logo p {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
 }
 .side-nav .side-nav-inner .logo .logo-image {
   height: 100%;
@@ -503,7 +508,7 @@ header .inner-header .search-button {
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 .side-nav .side-nav-inner nav .nav-links {
   display: flex;
@@ -556,11 +561,13 @@ header .inner-header .search-button {
 .side-nav .side-nav-inner .contact-info button {
   color: #1F1F1F;
   margin-bottom: 0.5rem;
-  font-size: 1rem;
+  font-size: 0.9rem;
   cursor: pointer;
+  font-weight: 500;
 }
 .side-nav .side-nav-inner .contact-info button i {
   margin-right: 0.2rem;
+  color: var(--pri);
 }
 .side-nav .side-nav-inner .social-links {
   position: absolute;
@@ -696,6 +703,10 @@ header .inner-header .search-button {
 .banner-section .slide-button-group .slide-button-next.swiper-button-disabled, .banner-section .slide-button-group .slide-button-prev.swiper-button-disabled {
   opacity: 0.5;
   pointer-events: none;
+}
+.banner-section .swiper {
+  width: 100%;
+  height: 100%;
 }
 .banner-section .swiper-slide, .banner-section .swiper-wrapper {
   height: 100%;
@@ -1631,7 +1642,7 @@ header .inner-header .search-button {
   color: #A00000;
   padding: 0 0.3rem;
 }
-.contact-section .contact .contact-area .contact-form .group input, .contact-section .contact .contact-area .contact-form .group textarea {
+.contact-section .contact .contact-area .contact-form .group input, .contact-section .contact .contact-area .contact-form .group textarea, .contact-section .contact .contact-area .contact-form .group select {
   height: 3rem;
   width: 100%;
   border: 1px solid rgba(31, 31, 31, 0.2);
@@ -1671,7 +1682,7 @@ footer .footer-inner {
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: 1.5fr 0.8fr 1fr 1.2fr;
+  grid-template-columns: 1.3fr 0.8fr 1fr 1.4fr;
   grid-gap: 20px;
 }
 footer .footer-inner .footer-item .footer-about {
@@ -1925,9 +1936,12 @@ footer .copyright h5 {
 .program-details-section .inner-program-details .content .others {
   margin-top: 2rem;
   position: relative;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-gap: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 .program-details-section .inner-program-details .content .others::after {
   content: "";
@@ -2056,7 +2070,7 @@ footer .copyright h5 {
 }
 .table-section .inner-table .morning table th, .table-section .inner-table .morning table td, .table-section .inner-table .afternoon table th, .table-section .inner-table .afternoon table td {
   text-align: left;
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
 }
 .table-section .inner-table .morning table th, .table-section .inner-table .afternoon table th {
   background: var(--pri);
@@ -2217,11 +2231,12 @@ footer .copyright h5 {
 }
 .event-details-section .inner-event-details .event-details .image {
   width: 100%;
-  height: 20rem;
-  border-radius: 1rem;
+  max-height: 50rem;
   overflow: hidden;
+  border-radius: 1rem;
 }
 .event-details-section .inner-event-details .event-details .image img {
+  border-radius: 1rem;
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
@@ -3074,6 +3089,49 @@ footer .copyright h5 {
   .banner-section .inner-banner .image-area .person-image {
     max-height: 30rem;
   }
+  .teacher-section .teacher-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .program-section.program-page .program-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .program-details-section .inner-program-details {
+    flex-direction: column;
+  }
+  .program-details-section .inner-program-details .image {
+    max-width: 100%;
+    flex: 100%;
+  }
+  .program-details-section .inner-program-details .content {
+    max-width: 100%;
+    flex: 100%;
+  }
+  .gallery-page .gallery .list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .food-menu-section .food-menu-list {
+    grid-gap: 1rem;
+  }
+  .contact-section .contact .contact-area {
+    grid-template-columns: 1fr;
+  }
+  .contact-section .contact .contact-area .contact-map {
+    height: 30rem;
+  }
+  .event-section.event-page .event-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .event-details-section .inner-event-details {
+    gap: 1rem;
+  }
+  .event-details-section .inner-event-details .event-details {
+    max-width: 60%;
+    flex: 60%;
+  }
+  .event-details-section .inner-event-details .event-details-other {
+    max-width: 40%;
+    flex: 40%;
+  }
 }
 @media only screen and (max-width: 1055px) {
   .wrapper {
@@ -3142,6 +3200,42 @@ footer .copyright h5 {
   footer .footer-inner {
     grid-template-columns: 1fr 1fr;
   }
+  .about-page-section .inner-about-page .image-area, .about-page-section .inner-school-visit .image-area, .school-visit-section .inner-about-page .image-area, .school-visit-section .inner-school-visit .image-area {
+    grid-template-columns: 1fr;
+  }
+  .about-page-section .inner-about-page .image-area .image, .about-page-section .inner-school-visit .image-area .image, .school-visit-section .inner-about-page .image-area .image, .school-visit-section .inner-school-visit .image-area .image {
+    height: 20rem;
+  }
+  .table-section .inner-table {
+    grid-template-columns: 1fr;
+  }
+  .food-menu-section .food-menu-list {
+    grid-template-columns: 1fr;
+  }
+  .food-menu-section .food-menu-list::before {
+    content: none;
+  }
+  .event-details-section .inner-event-details {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .event-details-section .inner-event-details .event-details {
+    max-width: 100%;
+    flex: 100%;
+  }
+  .event-details-section .inner-event-details .event-details-other {
+    max-width: 100%;
+    flex: 100%;
+  }
+  .event-details-section .inner-event-details .event-details-other .latest-events .event-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    grid-gap: 0;
+  }
+  .event-details-section .inner-event-details .event-details-other .latest-events .event-list .item {
+    border-bottom: none;
+  }
 }
 @media only screen and (max-width: 800px) {
   .wrapper {
@@ -3179,6 +3273,27 @@ footer .copyright h5 {
     --h: calc((140vh - (var(--n) - 1)*var(--g))/var(--n));
     height: 140vh;
   }
+  .teacher-section .teacher-list {
+    grid-template-columns: 1fr 1fr;
+  }
+  .program-section.program-page .program-list {
+    grid-template-columns: 1fr 1fr;
+  }
+  .program-feature .program-feature-list {
+    grid-template-columns: 1fr 1fr;
+  }
+  .gallery-page .gallery .list {
+    grid-template-columns: 1fr 1fr;
+  }
+  .event-section.event-page .event-list {
+    grid-template-columns: 1fr 1fr;
+  }
+  .event-details-section .inner-event-details .event-details-other .latest-events .event-list {
+    grid-template-columns: 1fr;
+  }
+  .event-details-section .inner-event-details .event-details-other .latest-events .event-list .item {
+    border-bottom: 1px solid rgba(31, 31, 31, 0.3);
+  }
 }
 @media only screen and (max-width: 600px) {
   .wrapper {
@@ -3197,21 +3312,15 @@ footer .copyright h5 {
   .page-title-section {
     height: 14rem;
   }
+  .page-title-section .page-title {
+    margin-bottom: -5px;
+  }
   .page-title-section .page-title h5 {
-    font-size: 1.4rem;
-    margin-bottom: 1.5rem;
-    font-weight: 400;
-  }
-  .page-title-section .page-title h5 a {
-    color: #FFFFFF;
-  }
-  .page-title-section .page-title h5 a:hover {
-    color: var(--pri);
+    font-size: 1.2rem;
   }
   .page-title-section .page-title h2 {
     font-size: 4rem;
-    line-height: 3.8rem;
-    text-transform: uppercase;
+    line-height: 3rem;
   }
   @keyframes floatingObj1 {
     0% {
@@ -3349,6 +3458,244 @@ footer .copyright h5 {
     margin-bottom: 0.6rem;
     font-size: 0.9rem;
   }
+  .about-page-section .inner-about-page .content .about-page-title-area, .about-page-section .inner-school-visit .content .about-page-title-area, .school-visit-section .inner-about-page .content .about-page-title-area, .school-visit-section .inner-school-visit .content .about-page-title-area {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .about-page-section .inner-about-page .content .about-page-title-area h1, .about-page-section .inner-school-visit .content .about-page-title-area h1, .school-visit-section .inner-about-page .content .about-page-title-area h1, .school-visit-section .inner-school-visit .content .about-page-title-area h1 {
+    font-size: 2.3rem;
+  }
+  .about-page-section .inner-about-page .content h2, .about-page-section .inner-school-visit .content h2, .school-visit-section .inner-about-page .content h2, .school-visit-section .inner-school-visit .content h2 {
+    font-size: 1.3rem;
+  }
+  .about-page-section .inner-about-page .content h3, .about-page-section .inner-school-visit .content h3, .school-visit-section .inner-about-page .content h3, .school-visit-section .inner-school-visit .content h3 {
+    font-size: 1rem;
+  }
+  .about-page-section .inner-about-page .content p, .about-page-section .inner-school-visit .content p, .school-visit-section .inner-about-page .content p, .school-visit-section .inner-school-visit .content p {
+    font-size: 0.9rem;
+  }
+  .about-page-section .inner-about-page .content .custom-button, .about-page-section .inner-school-visit .content .custom-button, .school-visit-section .inner-about-page .content .custom-button, .school-visit-section .inner-school-visit .content .custom-button {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  .about-page-section .inner-about-page .image-area .image, .about-page-section .inner-school-visit .image-area .image, .school-visit-section .inner-about-page .image-area .image, .school-visit-section .inner-school-visit .image-area .image {
+    height: 15rem;
+  }
+  .about-page-section .inner-about-page .image-area .ratings, .about-page-section .inner-school-visit .image-area .ratings, .school-visit-section .inner-about-page .image-area .ratings, .school-visit-section .inner-school-visit .image-area .ratings {
+    z-index: 3;
+    height: 9rem;
+    width: 15rem;
+  }
+  .about-page-section .inner-about-page .image-area .ratings h5, .about-page-section .inner-school-visit .image-area .ratings h5, .school-visit-section .inner-about-page .image-area .ratings h5, .school-visit-section .inner-school-visit .image-area .ratings h5 {
+    font-size: 1.6rem;
+  }
+  .about-page-section .inner-about-page .image-area .ratings .stars, .about-page-section .inner-school-visit .image-area .ratings .stars, .school-visit-section .inner-about-page .image-area .ratings .stars, .school-visit-section .inner-school-visit .image-area .ratings .stars {
+    font-size: 1.2rem;
+  }
+  .about-page-section .inner-about-page .image-area .ratings p, .about-page-section .inner-school-visit .image-area .ratings p, .school-visit-section .inner-about-page .image-area .ratings p, .school-visit-section .inner-school-visit .image-area .ratings p {
+    font-size: 1rem;
+  }
+  .teacher-section .teacher-list .item .image {
+    height: 17rem;
+  }
+  .teacher-section .teacher-list .item .teacher-info {
+    bottom: -1.6rem;
+    border-radius: 0.6rem;
+  }
+  .teacher-section .teacher-list .item .teacher-info h3 {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+  .teacher-section .teacher-list .item .teacher-info h5 {
+    font-size: 0.7rem;
+  }
+  .teacher-section .teacher-list .item .teacher-info .social-links {
+    margin-top: 0.7rem;
+  }
+  .teacher-section .teacher-list .item .teacher-info .social-links i {
+    height: 1.5rem;
+    width: 1.5rem;
+    font-size: 0.8rem;
+  }
+  .program-section .program-list .program-item .image-area {
+    height: 8rem;
+  }
+  .program-section .program-list .program-item .content {
+    padding: 1.3rem 0 0.5rem;
+  }
+  .program-section .program-list .program-item .content .fee {
+    padding: 0.1rem 0.7rem;
+    font-size: 0.7rem;
+  }
+  .program-section .program-list .program-item .content h3 {
+    font-size: 1rem;
+  }
+  .program-section .program-list .program-item .content p {
+    margin: 0.5rem 0;
+  }
+  .program-section .program-list .program-item .content .item-info {
+    padding: 0.6rem 0.2rem;
+    border-radius: 0.6rem;
+  }
+  .program-section .program-list .program-item .content .item-info li h4 {
+    font-size: 0.7rem;
+  }
+  .program-section .program-list .program-item .content .item-info li p {
+    font-size: 0.6rem;
+  }
+  .program-section .program-list .program-item .content .custom-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  .program-details-section .inner-program-details .content {
+    padding: 1.5rem;
+  }
+  .program-details-section .inner-program-details .content h2 {
+    font-size: 2rem;
+    margin-bottom: 0.7rem;
+  }
+  .program-details-section .inner-program-details .content p {
+    margin-bottom: 0.7rem;
+    font-size: 0.9rem;
+  }
+  .program-details-section .inner-program-details .content .others .teacher-details {
+    width: 70%;
+  }
+  .program-details-section .inner-program-details .content .others .teacher-details .teacher-image {
+    height: 3.5rem;
+    max-width: 3.5rem;
+    flex: 3.5rem;
+  }
+  .program-details-section .inner-program-details .content .others .teacher-details .info {
+    max-width: calc(100% - 4.5rem);
+    flex: calc(100% - 4.5rem);
+  }
+  .program-details-section .inner-program-details .content .others .teacher-details .info h5 {
+    font-size: 0.8rem;
+  }
+  .program-details-section .inner-program-details .content .others .teacher-details .info h3 {
+    font-size: 1rem;
+    margin-top: 0.1rem;
+  }
+  .program-details-section .inner-program-details .content .others .fee h5 {
+    font-size: 0.8rem;
+  }
+  .program-details-section .inner-program-details .content .others .fee h3 {
+    font-size: 1rem;
+    margin-top: 0.1rem;
+  }
+  .program-feature .program-feature-list {
+    grid-template-columns: 1fr 1fr;
+  }
+  .program-feature .program-feature-list .item .icon {
+    height: 4rem;
+    width: 4rem;
+  }
+  .program-feature .program-feature-list .item .content h3 {
+    font-size: 1rem;
+  }
+  .program-feature .program-feature-list .item .content h5 {
+    font-size: 0.9rem;
+    margin-top: 0.2rem;
+  }
+  .table-section .inner-table .morning h3, .table-section .inner-table .afternoon h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.7rem;
+  }
+  .table-section .inner-table .morning table, .table-section .inner-table .afternoon table {
+    border-radius: 0.7rem;
+  }
+  .table-section .inner-table .morning table th, .table-section .inner-table .morning table td, .table-section .inner-table .afternoon table th, .table-section .inner-table .afternoon table td {
+    padding: 1rem;
+  }
+  .table-section .inner-table .morning table th, .table-section .inner-table .afternoon table th {
+    font-size: 1rem;
+  }
+  .table-section .inner-table .morning table td, .table-section .inner-table .afternoon table td {
+    font-size: 0.9rem;
+  }
+  .food-menu-section .food-menu-categories {
+    gap: 1rem 2rem;
+  }
+  .food-menu-section .food-menu-categories li {
+    font-size: 0.9rem;
+  }
+  .food-menu-section .food-menu-list .food-menu-item {
+    gap: 0.7rem;
+    padding: 0.5rem;
+  }
+  .food-menu-section .food-menu-list .food-menu-item .image {
+    height: 4rem;
+    max-width: 4rem;
+    flex: 4rem;
+    border-radius: 0.3rem;
+  }
+  .food-menu-section .food-menu-list .food-menu-item .content {
+    max-width: calc(100% - 6rem);
+    padding: 0;
+  }
+  .food-menu-section .food-menu-list .food-menu-item .content .item-head h3 {
+    font-size: 1rem;
+  }
+  .food-menu-section .food-menu-list .food-menu-item .content .item-head h5 {
+    font-size: 0.9rem;
+  }
+  .food-menu-section .food-menu-list .food-menu-item .content .item-body p {
+    font-size: 0.8rem;
+  }
+  .contact-section .contact .contact-area .contact-map {
+    height: 20rem;
+    border-radius: 0.5rem;
+  }
+  .contact-section .contact .contact-area .contact-form {
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+  .contact-section .contact .contact-area .contact-form .contact-title {
+    font-size: 1.2rem;
+  }
+  .contact-section .contact .contact-area .contact-form .input-group {
+    grid-template-columns: 1fr;
+  }
+  .contact-section .contact .contact-area .contact-form .group label {
+    font-size: 0.9rem;
+  }
+  .contact-section .contact .contact-area .contact-form .group input, .contact-section .contact .contact-area .contact-form .group textarea, .contact-section .contact .contact-area .contact-form .group select {
+    border-radius: 0.4rem;
+    margin-top: 0.3rem;
+  }
+  .event-section .event-list .event-item {
+    border-radius: 0.5rem;
+  }
+  .event-section .event-list .event-item .image {
+    height: 8rem;
+  }
+  .event-section .event-list .event-item .content {
+    padding: 0.5rem;
+    padding-left: 1.6rem;
+    min-height: 4.7rem;
+  }
+  .event-section .event-list .event-item .content .date {
+    width: 1.2rem;
+  }
+  .event-section .event-list .event-item .content .date span {
+    font-size: 0.6rem;
+  }
+  .event-section .event-list .event-item .content .post-info .posted-by, .event-section .event-list .event-item .content .post-info .comments {
+    gap: 0.4rem;
+    font-size: 0.8rem;
+  }
+  .event-section .event-list .event-item .content .post-info .posted-by i, .event-section .event-list .event-item .content .post-info .comments i {
+    font-size: 0.8rem;
+  }
+  .event-section .event-list .event-item .content .post-info .posted-by h4, .event-section .event-list .event-item .content .post-info .comments h4 {
+    font-size: 0.7rem;
+  }
+  .event-section .event-list .event-item .content h3 {
+    font-size: 0.7rem;
+    margin-top: 0.7rem;
+    line-height: 120%;
+  }
 }
 @media only screen and (max-width: 500px) {
   .custom-button {
@@ -3429,8 +3776,24 @@ footer .copyright h5 {
   .testimonials-section .inner-testimonials .testimonials-area .testimonial-item .testimonial-message p {
     font-size: 0.8rem;
   }
+  .gallery-page .gallery .list {
+    grid-gap: 0.5rem;
+  }
+  .gallery-page .gallery .list a {
+    height: 8rem;
+  }
 }
 @media only screen and (max-width: 440px) {
+  .page-title-section {
+    height: 14rem;
+  }
+  .page-title-section .page-title h5 {
+    font-size: 0.9rem;
+  }
+  .page-title-section .page-title h2 {
+    font-size: 3rem;
+    line-height: 2.5rem;
+  }
   .section-title {
     padding: 3rem 0;
     margin-bottom: 3rem;
@@ -3464,10 +3827,207 @@ footer .copyright h5 {
   .gallery-section .gallery .list {
     --n: 10 /* number of rows*/;
   }
+  .teacher-section .teacher-list {
+    grid-template-columns: 1fr;
+  }
+  .teacher-section .teacher-list .item .image {
+    height: 22rem;
+  }
+  .teacher-section .teacher-list .item .teacher-info .social-links {
+    gap: 1rem;
+  }
+  .about-page-section .inner-about-page .content .about-page-title-area, .about-page-section .inner-school-visit .content .about-page-title-area, .school-visit-section .inner-about-page .content .about-page-title-area, .school-visit-section .inner-school-visit .content .about-page-title-area {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .about-page-section .inner-about-page .content .about-page-title-area h1, .about-page-section .inner-school-visit .content .about-page-title-area h1, .school-visit-section .inner-about-page .content .about-page-title-area h1, .school-visit-section .inner-school-visit .content .about-page-title-area h1 {
+    font-size: 2rem;
+  }
+  .about-page-section .inner-about-page .image-area .image, .about-page-section .inner-school-visit .image-area .image, .school-visit-section .inner-about-page .image-area .image, .school-visit-section .inner-school-visit .image-area .image {
+    height: 13rem;
+  }
+  .about-page-section .inner-about-page .image-area .ratings, .about-page-section .inner-school-visit .image-area .ratings, .school-visit-section .inner-about-page .image-area .ratings, .school-visit-section .inner-school-visit .image-area .ratings {
+    z-index: 3;
+    height: 9rem;
+    width: 15rem;
+  }
+  .about-page-section .inner-about-page .image-area .ratings h5, .about-page-section .inner-school-visit .image-area .ratings h5, .school-visit-section .inner-about-page .image-area .ratings h5, .school-visit-section .inner-school-visit .image-area .ratings h5 {
+    font-size: 1.6rem;
+  }
+  .about-page-section .inner-about-page .image-area .ratings .stars, .about-page-section .inner-school-visit .image-area .ratings .stars, .school-visit-section .inner-about-page .image-area .ratings .stars, .school-visit-section .inner-school-visit .image-area .ratings .stars {
+    font-size: 1.2rem;
+  }
+  .about-page-section .inner-about-page .image-area .ratings p, .about-page-section .inner-school-visit .image-area .ratings p, .school-visit-section .inner-about-page .image-area .ratings p, .school-visit-section .inner-school-visit .image-area .ratings p {
+    font-size: 1rem;
+  }
+  .program-section.program-page .program-list {
+    grid-template-columns: 1fr;
+  }
+  .program-section .program-list .program-item .image-area {
+    height: 12rem;
+  }
+  .program-section .program-list .program-item .content .fee {
+    font-size: 0.8rem;
+  }
+  .program-section .program-list .program-item .content h3 {
+    font-size: 1.1rem;
+  }
+  .program-section .program-list .program-item .content p {
+    margin: 0.7rem 0;
+  }
+  .program-section .program-list .program-item .content .item-info li h4 {
+    font-size: 0.8rem;
+  }
+  .program-section .program-list .program-item .content .item-info li p {
+    font-size: 0.7rem;
+  }
+  .program-section .program-list .program-item .content .custom-button {
+    font-size: 0.8rem;
+  }
+  .program-details-section .inner-program-details .content {
+    padding: 1rem;
+  }
+  .program-details-section .inner-program-details .content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.6rem;
+  }
+  .program-details-section .inner-program-details .content p {
+    font-size: 0.8rem;
+  }
+  .program-feature .program-feature-list {
+    grid-template-columns: 1fr 1fr;
+  }
+  .program-feature .program-feature-list .item {
+    padding: 0.8rem 0.7rem;
+  }
+  .program-feature .program-feature-list .item .icon {
+    height: 3rem;
+    width: 3rem;
+  }
+  .program-feature .program-feature-list .item .content h3 {
+    font-size: 0.9rem;
+  }
+  .program-feature .program-feature-list .item .content h5 {
+    font-size: 0.8rem;
+  }
+  .table-section .inner-table .morning, .table-section .inner-table .afternoon {
+    overflow: auto;
+  }
+  .table-section .inner-table .morning table, .table-section .inner-table .afternoon table {
+    min-width: 30rem;
+  }
+  .food-menu-section .food-menu-categories {
+    gap: 1rem 1.5rem;
+  }
+  .food-menu-section .food-menu-categories li {
+    font-size: 0.85rem;
+  }
+  .food-menu-section .food-menu-list {
+    grid-template-columns: 1fr 1fr;
+  }
+  .food-menu-section .food-menu-list .food-menu-item {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .food-menu-section .food-menu-list .food-menu-item .image {
+    height: 100%;
+    width: 100%;
+    max-height: 4rem;
+    max-width: 4rem;
+  }
+  .food-menu-section .food-menu-list .food-menu-item .content {
+    max-width: 100%;
+  }
+  .food-menu-section .food-menu-list .food-menu-item .content .item-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .food-menu-section .food-menu-list .food-menu-item .content .item-head h3 {
+    font-size: 0.9rem;
+  }
+  .food-menu-section .food-menu-list .food-menu-item .content .item-head h5 {
+    font-size: 0.8rem;
+  }
+  .food-menu-section .food-menu-list .food-menu-item .content .item-body p {
+    font-size: 0.7rem;
+  }
+  .event-section.event-page .event-list {
+    grid-template-columns: 1fr;
+  }
+  .event-section .event-list .event-item .image {
+    height: 13rem;
+  }
+  .event-section .event-list .event-item .content {
+    padding: 0.9rem;
+    padding-left: 2.7rem;
+    min-height: 7rem;
+  }
+  .event-section .event-list .event-item .content .date {
+    width: 1.8rem;
+  }
+  .event-section .event-list .event-item .content .date span {
+    font-size: 0.8rem;
+  }
+  .event-section .event-list .event-item .content .post-info .posted-by, .event-section .event-list .event-item .content .post-info .comments {
+    gap: 0.4rem;
+    font-size: 0.9rem;
+  }
+  .event-section .event-list .event-item .content .post-info .posted-by i, .event-section .event-list .event-item .content .post-info .comments i {
+    font-size: 0.9rem;
+  }
+  .event-section .event-list .event-item .content .post-info .posted-by h4, .event-section .event-list .event-item .content .post-info .comments h4 {
+    font-size: 0.8rem;
+  }
+  .event-section .event-list .event-item .content h3 {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
 }
 @media only screen and (max-width: 380px) {
   .principal-section .inner-principal .principal-image {
     width: 100%;
     height: 20rem;
+  }
+  .gallery-page .gallery .list {
+    grid-template-columns: 1fr;
+  }
+  .gallery-page .gallery .list a {
+    height: 12rem;
+  }
+  .food-menu-section .food-menu-list {
+    grid-template-columns: 1fr;
+  }
+  .event-section .event-list .event-item {
+    border-radius: 0.5rem;
+  }
+  .event-section .event-list .event-item .image {
+    height: 10rem;
+  }
+  .event-section .event-list .event-item .content {
+    padding: 0.5rem;
+    padding-left: 1.6rem;
+    min-height: 4.7rem;
+  }
+  .event-section .event-list .event-item .content .date {
+    width: 1.2rem;
+  }
+  .event-section .event-list .event-item .content .date span {
+    font-size: 0.6rem;
+  }
+  .event-section .event-list .event-item .content .post-info .posted-by, .event-section .event-list .event-item .content .post-info .comments {
+    gap: 0.4rem;
+    font-size: 0.8rem;
+  }
+  .event-section .event-list .event-item .content .post-info .posted-by i, .event-section .event-list .event-item .content .post-info .comments i {
+    font-size: 0.8rem;
+  }
+  .event-section .event-list .event-item .content .post-info .posted-by h4, .event-section .event-list .event-item .content .post-info .comments h4 {
+    font-size: 0.7rem;
+  }
+  .event-section .event-list .event-item .content h3 {
+    font-size: 0.7rem;
+    margin-top: 0.7rem;
+    line-height: 120%;
   }
 }/*# sourceMappingURL=main.css.map */

@@ -180,16 +180,16 @@ p
   position: relative
   height: 18rem
   @include bgImage()
-  background-position: center -5rem
+  background-color: $sec
 
-  &::after
-    content: ""
+  .page-title-section-image
     position: absolute
     top: 0
     left: 0
     height: 100%
     width: 100%
-    background-color: rgba(var(--secrgb), .5)
+    @include image()
+    opacity: .08
     z-index: 1
 
   .page-title

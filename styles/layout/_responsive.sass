@@ -119,6 +119,61 @@
         .person-image
           max-height: 30rem
 
+  .teacher-section
+    .teacher-list
+      grid-template-columns: 1fr 1fr 1fr
+
+  .program-section
+    &.program-page
+      .program-list
+        grid-template-columns: 1fr 1fr 1fr
+
+  .program-details-section
+    .inner-program-details
+      flex-direction: column
+
+      .image
+        max-width: 100%
+        flex: 100%
+
+      .content
+        max-width: 100%
+        flex: 100%
+
+  .gallery-page
+    .gallery
+      .list
+        grid-template-columns: 1fr 1fr 1fr
+
+  .food-menu-section
+    .food-menu-list
+      grid-gap: 1rem
+
+  .contact-section
+    .contact
+      .contact-area
+        grid-template-columns: 1fr
+
+        .contact-map
+          height: 30rem
+
+  .event-section
+    &.event-page
+      .event-list
+        grid-template-columns: 1fr 1fr 1fr
+
+  .event-details-section
+    .inner-event-details
+      gap: 1rem
+
+      .event-details
+        max-width: 60%
+        flex: 60%
+
+      .event-details-other
+        max-width: 40%
+        flex: 40%
+
 @media only screen and ( max-width:  1055px)
   .wrapper
     max-width: 900px
@@ -195,6 +250,45 @@
     .footer-inner
       grid-template-columns: 1fr 1fr
 
+  .about-page-section, .school-visit-section
+    .inner-about-page, .inner-school-visit
+      .image-area
+        grid-template-columns: 1fr
+        .image
+          height: 20rem
+
+  .table-section
+    .inner-table
+      grid-template-columns: 1fr
+
+  .food-menu-section
+    .food-menu-list
+      grid-template-columns: 1fr
+
+      &::before
+        content: none
+
+  .event-details-section
+    .inner-event-details
+      flex-wrap: wrap
+      gap: 1rem
+
+      .event-details
+        max-width: 100%
+        flex: 100%
+
+      .event-details-other
+        max-width: 100%
+        flex: 100%
+
+        .latest-events
+          .event-list
+            @include grid($columns: 1fr 1fr)
+            grid-gap: 0
+
+            .item
+              border-bottom: none
+
 @media only screen and ( max-width:  800px)
   .wrapper
     max-width: 600px
@@ -239,6 +333,39 @@
         --h: calc((140vh - (var(--n) - 1)*var(--g))/var(--n))
         height: 140vh
 
+  .teacher-section
+    .teacher-list
+      grid-template-columns: 1fr 1fr
+
+  .program-section
+    &.program-page
+      .program-list
+        grid-template-columns: 1fr 1fr
+
+  .program-feature
+    .program-feature-list
+      grid-template-columns: 1fr 1fr
+
+  .gallery-page
+    .gallery
+      .list
+        grid-template-columns: 1fr 1fr
+
+  .event-section
+    &.event-page
+      .event-list
+        grid-template-columns: 1fr 1fr
+
+  .event-details-section
+    .inner-event-details
+      .event-details-other
+        .latest-events
+          .event-list
+            grid-template-columns: 1fr
+
+            .item
+              border-bottom: 1px solid rgba($dark, .3)
+
 @media only screen and ( max-width:  700px)
 
 @media only screen and ( max-width:  650px)
@@ -262,20 +389,13 @@
     height: 14rem
 
     .page-title
+      margin-bottom: -5px
       h5
-        font-size: 1.4rem
-        margin-bottom: 1.5rem
-        font-weight: 400
-        a
-          color: $light
-
-          &:hover
-            color: $pri
+        font-size: 1.2rem
 
       h2
         font-size: 4rem
-        line-height: 3.8rem
-        text-transform: uppercase
+        line-height: 3rem
 
   .banner-section
     @keyframes floatingObj1
@@ -435,6 +555,274 @@
             margin-bottom: .6rem
             font-size: .9rem
 
+  .about-page-section, .school-visit-section
+    .inner-about-page, .inner-school-visit
+      .content
+        .about-page-title-area
+          max-width: 800px
+          margin: 0 auto
+
+          h1
+            font-size: 2.3rem
+
+        h2
+          font-size: 1.3rem
+
+        h3
+          font-size: 1rem
+
+        p
+          font-size: .9rem
+
+        .custom-button
+          padding: .6rem 1.5rem
+          font-size: .9rem
+
+      .image-area
+        .image
+          height: 15rem
+
+        .ratings
+          z-index: 3
+          height: 9rem
+          width: 15rem
+
+          h5
+            font-size: 1.6rem
+
+          .stars
+            font-size: 1.2rem
+
+          p
+            font-size: 1rem
+
+  .teacher-section
+    .teacher-list
+      .item
+        .image
+          height: 17rem
+
+        .teacher-info
+          bottom: -1.6rem
+          border-radius: .6rem
+
+          h3
+            font-size: 1rem
+            margin-top: .5rem
+
+          h5
+            font-size: .7rem
+
+          .social-links
+            margin-top: .7rem
+            i
+              height: 1.5rem
+              width: 1.5rem
+              font-size: .8rem
+
+  .program-section
+    .program-list
+      .program-item
+        .image-area
+          height: 8rem
+
+        .content
+          padding: 1.3rem 0 .5rem
+
+          .fee
+            padding: .1rem .7rem
+            font-size: .7rem
+
+          h3
+            font-size: 1rem
+
+          p
+            margin: .5rem 0
+
+          .item-info
+            padding: .6rem .2rem
+            border-radius: .6rem
+
+            li
+              h4
+                font-size: .7rem
+
+              p
+                font-size: .6rem
+
+          .custom-button
+            padding: .5rem 1rem
+            font-size: .9rem
+
+  .program-details-section
+    .inner-program-details
+      .content
+        padding: 1.5rem
+
+        h2
+          font-size: 2rem
+          margin-bottom: .7rem
+
+        p
+          margin-bottom: .7rem
+          font-size: .9rem
+
+        .others
+          .teacher-details
+            width: 70%
+
+            .teacher-image
+              height: 3.5rem
+              max-width: 3.5rem
+              flex: 3.5rem
+
+            .info
+              max-width: calc( 100% - 4.5rem )
+              flex: calc( 100% - 4.5rem )
+
+              h5
+                font-size: .8rem
+
+              h3
+                font-size: 1rem
+                margin-top: .1rem
+
+          .fee
+            h5
+              font-size: .8rem
+
+            h3
+              font-size: 1rem
+              margin-top: .1rem
+
+  .program-feature
+    .program-feature-list
+      grid-template-columns: 1fr 1fr
+
+      .item
+        .icon
+          height: 4rem
+          width: 4rem
+
+        .content
+          h3
+            font-size: 1rem
+
+          h5
+            font-size: .9rem
+            margin-top: .2rem
+
+  .table-section
+    .inner-table
+      .morning, .afternoon
+        h3
+          font-size: 1.3rem
+          margin-bottom: .7rem
+
+        table
+          border-radius: .7rem
+
+          th, td
+            padding: 1rem
+
+          th
+            font-size: 1rem
+
+          td
+            font-size: .9rem
+
+  .food-menu-section
+    .food-menu-categories
+      gap: 1rem 2rem
+
+      li
+        font-size: .9rem
+
+    .food-menu-list
+      .food-menu-item
+        gap: .7rem
+        padding: .5rem
+
+        .image
+          height: 4rem
+          max-width: 4rem
+          flex: 4rem
+          border-radius: .3rem
+
+        .content
+          max-width: calc( 100% - 6rem )
+          padding: 0
+
+          .item-head
+            h3
+              font-size: 1rem
+
+            h5
+              font-size: .9rem
+
+          .item-body
+            p
+              font-size: .8rem
+
+  .contact-section
+    .contact
+      .contact-area
+        .contact-map
+          height: 20rem
+          border-radius: .5rem
+
+        .contact-form
+          padding: 1rem
+          border-radius: .5rem
+
+          .contact-title
+            font-size: 1.2rem
+
+          .input-group
+            grid-template-columns: 1fr
+
+          .group
+            label
+              font-size: .9rem
+
+            input, textarea, select
+              border-radius: .4rem
+              margin-top: .3rem
+
+  .event-section
+    .event-list
+      .event-item
+        border-radius: .5rem
+
+        .image
+          height: 8rem
+
+        .content
+          padding: .5rem
+          padding-left: 1.6rem
+          min-height: 4.7rem
+
+          .date
+            width: 1.2rem
+            span
+              font-size: .6rem
+
+          .post-info
+            .posted-by, .comments
+              gap: .4rem
+              font-size: .8rem
+
+              i
+                font-size: .8rem
+
+              h4
+                font-size: .7rem
+
+          h3
+            font-size: .7rem
+            margin-top: .7rem
+            line-height: 120%
+
 @media only screen and ( max-width:  500px)
   .custom-button
     padding: .5rem 1rem
@@ -527,7 +915,25 @@
             p
               font-size: .8rem
 
+  .gallery-page
+    .gallery
+      .list
+        grid-gap: .5rem
+        a
+          height: 8rem
+
 @media only screen and ( max-width:  440px)
+  .page-title-section
+    height: 14rem
+
+    .page-title
+      h5
+        font-size: .9rem
+
+      h2
+        font-size: 3rem
+        line-height: 2.5rem
+
   .section-title
     padding: 3rem 0
     margin-bottom: 3rem
@@ -568,9 +974,233 @@
       .list
         --n: 10 /* number of rows*/
 
+  .teacher-section
+    .teacher-list
+      grid-template-columns: 1fr
+      .item
+        .image
+          height: 22rem
+
+        .teacher-info
+          .social-links
+            gap: 1rem
+
+  .about-page-section, .school-visit-section
+    .inner-about-page, .inner-school-visit
+      .content
+        .about-page-title-area
+          max-width: 800px
+          margin: 0 auto
+
+          h1
+            font-size: 2rem
+
+      .image-area
+        .image
+          height: 13rem
+
+        .ratings
+          z-index: 3
+          height: 9rem
+          width: 15rem
+
+          h5
+            font-size: 1.6rem
+
+          .stars
+            font-size: 1.2rem
+
+          p
+            font-size: 1rem
+
+  .program-section
+    &.program-page
+      .program-list
+        grid-template-columns: 1fr
+
+    .program-list
+      .program-item
+        .image-area
+          height: 12rem
+
+        .content
+          .fee
+            font-size: .8rem
+
+          h3
+            font-size: 1.1rem
+
+          p
+            margin: .7rem 0
+
+          .item-info
+            li
+              h4
+                font-size: .8rem
+
+              p
+                font-size: .7rem
+
+          .custom-button
+            font-size: .8rem
+
+  .program-details-section
+    .inner-program-details
+      .content
+        padding: 1rem
+
+        h2
+          font-size: 1.8rem
+          margin-bottom: .6rem
+
+        p
+          font-size: .8rem
+
+  .program-feature
+    .program-feature-list
+      grid-template-columns: 1fr 1fr
+
+      .item
+        padding: .8rem .7rem
+
+        .icon
+          height: 3rem
+          width: 3rem
+
+        .content
+          h3
+            font-size: .9rem
+
+          h5
+            font-size: .8rem
+
+  .table-section
+    .inner-table
+      .morning, .afternoon
+        overflow: auto
+        table
+          min-width: 30rem
+
+  .food-menu-section
+    .food-menu-categories
+      gap: 1rem 1.5rem
+
+      li
+        font-size: .85rem
+
+    .food-menu-list
+      grid-template-columns: 1fr 1fr
+      .food-menu-item
+        flex-direction: column
+        align-items: flex-start
+        justify-content: flex-start
+
+        .image
+          height: 100%
+          width: 100%
+          max-height: 4rem
+          max-width: 4rem
+
+        .content
+          max-width: 100%
+
+          .item-head
+            flex-direction: column
+            align-items: flex-start
+
+            h3
+              font-size: .9rem
+
+            h5
+              font-size: .8rem
+
+          .item-body
+            p
+              font-size: .7rem
+
+  .event-section
+    &.event-page
+      .event-list
+        grid-template-columns: 1fr
+
+    .event-list
+      .event-item
+        .image
+          height: 13rem
+
+        .content
+          padding: .9rem
+          padding-left: 2.7rem
+          min-height: 7rem
+
+          .date
+            width: 1.8rem
+            span
+              font-size: .8rem
+
+          .post-info
+            .posted-by, .comments
+              gap: .4rem
+              font-size: .9rem
+
+              i
+                font-size: .9rem
+
+              h4
+                font-size: .8rem
+
+          h3
+            font-size: 1rem
+            margin-top: 1rem
+
 @media only screen and ( max-width:  380px)
   .principal-section
     .inner-principal
       .principal-image
         width: 100%
         height: 20rem
+
+  .gallery-page
+    .gallery
+      .list
+        grid-template-columns: 1fr
+        a
+          height: 12rem
+
+  .food-menu-section
+    .food-menu-list
+      grid-template-columns: 1fr
+
+  .event-section
+    .event-list
+      .event-item
+        border-radius: .5rem
+
+        .image
+          height: 10rem
+
+        .content
+          padding: .5rem
+          padding-left: 1.6rem
+          min-height: 4.7rem
+
+          .date
+            width: 1.2rem
+            span
+              font-size: .6rem
+
+          .post-info
+            .posted-by, .comments
+              gap: .4rem
+              font-size: .8rem
+
+              i
+                font-size: .8rem
+
+              h4
+                font-size: .7rem
+
+          h3
+            font-size: .7rem
+            margin-top: .7rem
+            line-height: 120%

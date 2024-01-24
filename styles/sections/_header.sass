@@ -168,7 +168,9 @@ header
   width: 100%
   z-index: 100
   @include flex($justify: flex-start)
+  align-items: flex-start
   pointer-events: none
+  overflow: auto
 
   &.active
     pointer-events: all
@@ -235,11 +237,11 @@ header
       padding: 0 .5rem
 
       h1
-        font-size: 1.4rem
+        font-size: 1.6rem
         line-height: 130%
 
       p
-        font-size: .8rem
+        font-size: .85rem
 
       .logo-image
         @include image()
@@ -248,7 +250,7 @@ header
     nav
       @include flex($justify: flex-start)
       width: 100%
-      margin-top: 2rem
+      margin-top: 1.5rem
 
       .nav-links
         @include flex($justify: flex-start)
@@ -298,11 +300,13 @@ header
       button
         color: $dark
         margin-bottom: .5rem
-        font-size: 1rem
+        font-size: .9rem
         cursor: pointer
+        font-weight: 500
 
         i
           margin-right: .2rem
+          color: $pri
 
     .social-links
       position: absolute

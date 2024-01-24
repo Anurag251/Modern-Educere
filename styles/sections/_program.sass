@@ -160,7 +160,10 @@
       .others
         margin-top: 2rem
         position: relative
-        @include grid($columns: 2fr 1fr)
+        @include flex($justify: space-between)
+        align-items: flex-start
+        flex-wrap: wrap
+        gap: 1rem
 
         &::after
           content: ""
@@ -277,7 +280,7 @@
 
         th, td
           text-align: left
-          padding: 1rem 2rem
+          padding: 1rem 1.5rem
 
         th
           background: $pri
